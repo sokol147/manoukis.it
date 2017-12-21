@@ -1,0 +1,32 @@
+.header{
+	background-color: $Brown;
+	&-wrapper{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		.btn-menu{
+			display: none;
+		}
+	}
+	.nav{
+		&-wrapper{
+			margin-left: auto;
+		}
+		&__item{
+			transition: all .3s;
+			&:hover{
+				background-color: $darkBrown;
+				cursor: pointer;
+			}
+		}
+		&__link{
+			display: inline-block;
+			padding: 24px 23px;
+			color: #fff;
+			font-weight: $bold;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}

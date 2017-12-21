@@ -2,11 +2,20 @@ body, html{
 	margin:0;
 	height: 100%;
 }
+img{
+	max-width: 100%;
+}
 ul,li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+p{
 	margin: 0;
 	padding: 0;
 }
 html{
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 1.42;
 	-webkit-font-smoothing:antialised;

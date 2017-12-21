@@ -1,0 +1,128 @@
+-
+		var leftBanners = {
+			'#lbanner-1':'lbanner-1.png',
+			'#lbanner-2':'lbanner-2.png',
+			'#lbanner-3':'lbanner-3.png',
+			'#lbanner-4':'lbanner-4.png',
+			'#lbanner-5':'lbanner-5.png',
+			'#lbanner-6':'lbanner-6.png',
+			'#lbanner-7':'lbanner-7.png',
+			'#lbanner-8':'lbanner-8.png',
+		}
+- var rBannerTopLink = '#rbanner-top'
+- var rNammerTopImg = 'rbanner-top.png'
+-
+		var rightBanners = {
+			'#rbanner-1':'rbanner-1.png',
+			'#rbanner-2':'rbanner-2.png',
+		}
+
+
+- var subText = 'Naujienų prenumerata'
+- var subBtnText = 'Prenumeruoti'
+- var appearanceHeader = 'Apklausa'
+- var appearanceQuestion = 'Ar balsuosite už Arūną Karbauskį prezidento rinkimuose?'
+- var appearanceAnswer = ['Taip, balsuosiu','Nebalsuosiu','Nežinau']
+- var appearenceBtnText = 'Atsakyti'
+- var weatherHeader = 'Orai'
+- var businessInfoHeader = 'Verslo informacija'
+-
+		var businessNews ={
+			'/link1':'Šiemet nustatyti aštuoni glifosato netinkamo naudojimo atvejai',
+			'/link2':'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
+			'/link3':'Mineralinio azoto dirvožemyje - ypatingai mažai'
+		}
+- var advertisingHeader = 'Reklama'
+-
+		var advertising = {
+			'/link1':'Žurnalas „Mano ūkis“ ',
+			'/link2':'Žurnalas „Vetinfo“',
+			'/link3':'Žurnalas „Mano gyvenimas“',
+			'/link4':'Specialieji žurnalų priedai',
+		}
+- var galleriesHeader = 'Galerijos'
+-
+		var gallery =[
+			{
+				img: 'gallery-main-1.png',
+				link: 'link-1',
+				name: '„DOJUS agro“ 25 metų jubiliejaus šventė Šiauliuose',
+				counter: '30'
+			},{
+				img: 'gallery-main-2.png',
+				link: 'link-2',
+				name: 'Mus supantys žiedai. Nuotraukos iš MANO ŪKIO archyvo',
+				counter: '25'
+			}
+		]
+
+.main-content
+	.container
+		.row
+			.col-lg-2.left-banner-column
+				.side-menu
+
+				.banner-block-l
+					ul.left-banner
+						each lBannerImg,lBannerLink in leftBanners
+							li.left-banner__item
+								a.left-banner__link(href=`${lBannerLink}`)
+									img.left-banner__img(src=`templates/images/lBanners/${lBannerImg}`)
+
+			.col-lg-7.main-news
+
+
+				.galleries
+					.galleries__header=galleriesHeader
+					ul.gallery__list
+						each item in gallery
+							li.gallery__item
+								img.gallery__img(src=`templates/images/gallery/${item.img}`)
+								.gallery__descr
+									a.gallery__link(href=`${item.link}`)=item.name
+									p.gallery__counter=item.counter
+
+				ul.news__list
+					li.news__item
+						img.news__img(src=``)
+						.news__descr(href=``)
+
+			.col-lg-3.right-banner-column
+				.right-banner.right-banner-top
+					a.right-banner__link(href=`${rBannerTopLink}`)
+						img.right-banner__img(src=`templates/images/rBanners/${rNammerTopImg}`)
+
+				form.subscription
+					p.subscription__text=subText
+					input.subscription__input(type='text' placeholder='Jūsų el. pašto adresas')
+					a.btn-sub=subBtnText
+				.right-banner.right-banner-group
+					ul.right-banner
+						each rBannerImg,rBannerLink in rightBanners
+							li.right-banner__item
+								a.right-banner__link(href=`${rBannerLink}`)
+									img.right-banner__img(src=`templates/images/rBanners/${rBannerImg}`)
+				.appearance.widget
+					.appearance__header.widget__header=appearanceHeader
+					form.appearance__question-wrapper
+						.appearance__question=appearanceQuestion
+						ul.appearance__answer.answer
+							each item in appearanceAnswer
+								li.answer__item
+									label.answer__label.label--radio=item
+										input.answer__input.radio(type='radio' name='question')
+						a.btn-appearance=appearenceBtnText
+				.weather.widget
+					.widget__header=weatherHeader
+				.business-info.widget
+					.business-info__header.widget__header.widget__header-green=businessInfoHeader
+					ul.business-news
+						each businesNewsName, businessNewsLink in businessNews
+							li.business-news__item
+								a.business-news__link(href=`${businessNewsLink}`)=businesNewsName
+				.advertising.widget
+					.advertising__header.widget__header=advertisingHeader
+					ul.advertising__list
+						each advertisingName, advertisingLink in advertising
+							li.advertising__item
+								a.advertising__link(href=`${advertisingLink}`)=advertisingName

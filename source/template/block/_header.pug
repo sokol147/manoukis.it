@@ -1,4 +1,21 @@
+-
+		var menu = {
+			'/skelbimai.html':'Skelbimai',
+			'/prenumerata.html':'Prenumerata',
+			'/reklama.html':'Reklama',
+			'/kontaktai.html':'Kontaktai'
+		}
+
 header.header
 	.container
 		.row
-			.col-md-4
+			.header-wrapper
+				a.logo(href='index.html')
+					img.logo__image(src='templates/images/logo.png')
+				.nav-wrapper
+					a.btn.btn-menu(href='#')
+						img.menu__image(src='templates/images/icons/hamburger-nav.svg')
+					ul.nav
+						each menuItem,menuLink in menu
+							li.nav__item
+								a.nav__link(href=`${menuLink}`)= menuItem

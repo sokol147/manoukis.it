@@ -1,0 +1,43 @@
+.search-bar{
+	background-color: $LightGreyBG;
+	padding: 9px 0;
+	font-size: 13.5px;
+	margin-bottom: 23px;
+	.date{
+		color: $textBlack;
+		font-weight: $bold;
+		&-column{
+			padding-left: 0;
+		}
+	}
+	.short-news{
+		position: relative;
+		overflow: hidden;
+		color: $textNewsTag;
+		&__inner{
+			white-space: nowrap;
+		}
+		&:after{
+			content: '...';
+			position: absolute;
+			background-color: $LightGreyBG;
+			padding-left: 3px;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+.search{
+	&-bar-wrapper{
+		display: flex;
+		justify-content: flex-end;
+	}
+	&-column{
+		padding-right: 0;
+	}
+	&__word{
+		color: $searchBarTextColor;
+		font-weight: $medium;
+		margin-right: 14px;
+	}
+}
