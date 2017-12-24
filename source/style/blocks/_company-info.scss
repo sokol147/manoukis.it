@@ -1,0 +1,9 @@
+.company-info{
+	background-color: $DarkGrey;
+	padding: 15px 0;
+	&__text{
+		font-size: 14px;
+		color: #fff;
+		opacity: .3;
+	}
+}

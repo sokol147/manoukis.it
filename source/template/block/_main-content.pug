@@ -126,18 +126,37 @@
 			}
 		]
 
+- var mainNewsLink = 'link'
 - var mainNewsImg = 'main-news.png'
 - var mainNewsTag = 'Technika'
 - var mainNewsHeader = 'Briuselis žada sąžiningesnes išmokas žemdirbiams'
 - var mainNewsDescr = 'Lapkričio 30d., šeštadienis  Mokslas'
 - var mainNewsText = 'Vilnius. Briuselis ieškos būdų, kaip sąžiningiau paskirstyti tiesiogines išmokas žemdirbiams skirtingose Europos Sąjungos (ES) šalyse, tačiau konkrečių skaičių naujajame biudžete po 2020 metų kol kas nekomentuoja, sako už žemės ūkį atsakingas eurokomisaras Filas Hoganas (Phil Hogan). '
 
+-
+		var subMenu = {
+			'link1':'Agropolitika',
+			'link2':'Pasaulyje',
+			'link3':'Ūkis',
+			'link4':'Rinka'
+		}
+
 .main-content
 	.container
 		.row
 			.col-lg-2.left-banner-column
-				.side-menu
-					
+				ul.side-menu
+					li.side-menu__item
+						a.side-menu__link.side-menu__link-active(href='#') Naujienos
+						ul.side-menu__sub
+							each subItem, subLink in subMenu
+								li.sub__item
+									a.sub__link(href=`${subLink}`)= subItem
+					li.side-menu__item
+						a.side-menu__link(href='#') MANO ŪKIS, žurnalas
+					li.side-menu__item
+						a.side-menu__link(href='#') Spaudos centras
+
 				.banner-block-l
 					ul.left-banner
 						each lBannerImg,lBannerLink in leftBanners
@@ -158,9 +177,9 @@
 							.main__content
 								p.main__tag= mainNewsTag
 								a.news__link(href=`${mainNewsLink}`)
-									p.main__header= mainNewsHeader
-								p.main__description= mainNewsDescr
-								p.main__text= mainNewsText
+									p.news__header= mainNewsHeader
+								p.news__description= mainNewsDescr
+								p.news__text= mainNewsText
 									a.news__read-more(href=`${mainNewsLink}`) Daugiau
 						ul.news-block-small
 							each item in newsBlock
@@ -171,7 +190,6 @@
 									p.news__description= item.newsBlockDescr
 									p.news__text= item.newsBlockText
 										a.news__read-more(href=`${item.newsBlockLink}`) Daugiau
-
 
 				.g-banner
 					a.g-banner__link(href=`${gBannerLink}`)

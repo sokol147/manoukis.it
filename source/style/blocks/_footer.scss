@@ -1,0 +1,21 @@
+.footer{
+	border-top: 1px solid $borderGrey;
+	background-color: $LightGreyBG;
+	padding: 29px 0;
+	&-menu{
+		display: inline-block;
+		margin-right: 50px;
+		&__item{
+			margin-bottom: 4px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&__link{
+			color: $footerText;
+			&:hover{
+				color: $footerText;
+			}
+		}
+	}
+}

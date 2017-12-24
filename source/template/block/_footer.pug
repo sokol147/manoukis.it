@@ -1,0 +1,56 @@
+-
+		var menu1 = {
+			'link1':'Naujienos',
+			'link2':'Agropolitika',
+			'link3':'Pasaulyje',
+			'link4':'Ūkis',
+			'link5':'Rinka',
+			'link6':'Kiaulių maras'
+		}
+-
+		var menu2 = {
+			'link1':'Technika',
+			'link2':'Verslo informacija',
+			'link3':'BŽŪP',
+			'link4':'Mokslas',
+			'link5':'RiAplinka, miškainka',
+			'link6':'Maistas'
+		}
+-
+		var menu3 = {
+			'link1':'Gyvenimas toks...',
+			'link2':'Bendruomenės',
+			'link3':'Renginiai',
+			'link4':'Energetika',
+			'link5':'Nuomonė'
+		}
+-
+		var menu4 = {
+			'link1':'Skelbimai',
+			'link2':'Infoparduotuvė',
+			'link3':'Knygynas',
+			'link4':'Laisvalaikis',
+			'link5':'Mano miškas'
+		}
+
+footer.footer
+	.container
+		.row
+			.col-lg-2
+				ul.footer-menu
+					each menuItem, menuLink in menu1
+						li.footer-menu__item
+							a.footer-menu__link(href=`${menuLink}`)= menuItem
+			.col-lg-10.d-flex.align-items-start
+				ul.footer-menu
+					each menuItem, menuLink in menu2
+						li.footer-menu__item
+							a.footer-menu__link(href=`${menuLink}`)= menuItem
+				ul.footer-menu
+					each menuItem, menuLink in menu3
+						li.footer-menu__item
+							a.footer-menu__link(href=`${menuLink}`)= menuItem
+				ul.footer-menu
+					each menuItem, menuLink in menu4
+						li.footer-menu__item
+							a.footer-menu__link(href=`${menuLink}`)= menuItem
