@@ -4,7 +4,7 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		padding: 5px 15px;
+		padding: 0 15px;
 		.btn-menu{
 			display: none;
 		}
@@ -95,5 +95,12 @@
 	}
 	.footer{
 		display: none;
+	}
+	.main-content .news-block-big .main__img-link{
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.main-content .news-block__img{
+		width: 100%;
 	}
 }
