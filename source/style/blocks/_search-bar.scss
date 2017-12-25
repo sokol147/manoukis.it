@@ -6,9 +6,6 @@
 	.date{
 		color: $textBlack;
 		font-weight: $bold;
-		&-column{
-			padding-left: 0;
-		}
 	}
 	.short-news{
 		position: relative;
@@ -31,9 +28,6 @@
 	&-bar-wrapper{
 		display: flex;
 		justify-content: flex-end;
-	}
-	&-column{
-		padding-right: 0;
 	}
 	&__word{
 		color: $searchBarTextColor;
