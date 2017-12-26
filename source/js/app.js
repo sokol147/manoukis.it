@@ -1,7 +1,6 @@
-(function() {
-    'use strict';
-})();
-
 $(document).ready(function() {
-	svg4everybody();
+	$('.select-mobile-only').chosen({
+		disable_search_threshold: 7,
+		width: '100%'
+	})
 });
