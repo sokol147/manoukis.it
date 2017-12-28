@@ -1,12 +1,12 @@
 .search-bar{
 	background-color: $LightGreyBG;
 	padding: 9px 0;
-	font-size: 13.5px;
+	font-size: 14px;
 	margin-bottom: 23px;
 	.date{
 		color: $textBlack;
 		font-weight: $bold;
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.short-news{
 		position: relative;
@@ -34,5 +34,10 @@
 		color: $searchBarTextColor;
 		font-weight: $medium;
 		margin-right: 14px;
+	}
+}
+@media only screen and (max-width: 991px){
+	.search-bar-wrapper{
+		justify-content: flex-start;
 	}
 }

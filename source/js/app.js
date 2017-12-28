@@ -1,6 +1,7 @@
 $(document).ready(function() {
-	$('.select-mobile-only').chosen({
-		disable_search_threshold: 7,
-		width: '100%'
+	$('.btn-menu').on('click',function(e){
+		e.preventDefault()
+		$('.nav-wrapper').toggleClass('open');
 	})
+	$('.select-mobile-only').selectize();
 });

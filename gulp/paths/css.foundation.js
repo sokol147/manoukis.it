@@ -2,5 +2,5 @@
 
 module.exports = [
 	'./source/style/_libs/normalize.css',
-	'./source/style/_libs/chosen.min.css'
+	'./source/style/_libs/selectize.css'
 ];

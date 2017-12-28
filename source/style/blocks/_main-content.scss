@@ -18,6 +18,9 @@
 		}
 	}
 }
+.right-banner-column{
+	font-size: 15px;
+}
 .right-banner-top{
 	margin-bottom: 18px;
 	.right-banner__link{
@@ -41,14 +44,14 @@
 	padding: 18px 22px 22px;
 	margin-bottom: 18px;
 	&__text{
-		font-size: 18px;
+		font-size: 15px;
 		font-weight: $bold;
 		text-align: center;
 		margin-bottom: 10px;
 	}
 	&__input{
 		width: 100%;
-		font-size: 16px;
+		font-size: 15px;
 		padding: 10px 0 10px 13px;
 		margin-bottom: 11px;
 	}
@@ -97,6 +100,7 @@
 	}
 	.answer{
 		margin-bottom: 15px;
+		font-size: 15px;
 		&__item{
 			position: relative;
 		}
@@ -112,7 +116,7 @@
 			left: 0;
 			top: 5px;
 			outline: none;
-			&:before{
+			/* &:before{
 				transition: all .3s;
 				content: "";
 				position: absolute;
@@ -141,7 +145,7 @@
 				background: #fff;
 				border: 1px solid $checkBoxGrey;
 				border-radius: 50%;
-			}
+			} */
 		}
 		&__input{
 			/* display: none; */
@@ -174,6 +178,7 @@
 		&__item{
 			padding: 19px 29px 16px 15px;
 			border-bottom: 1px solid $borderGrey;
+			font-size: 15px;
 		}
 		&__item:last-child{
 			border-bottom: none;
@@ -189,9 +194,11 @@
 	}
 	&__item{
 		margin-bottom: 5px;
+		font-size: 15px;
 	}
 	&__link{
 		color: $textLime;
+		text-decoration: underline;
 		&:hover{
 			color: darken($textLime,10%);
 		}
@@ -223,11 +230,15 @@
 			font-weight: $bold;
 			color: #fff;
 			margin-bottom: 8px;
+			line-height: 1.1;
+			display: inline-block;
 		}
 		&__counter{
 			font-size: 13px;
 			&:before{
-
+				content: url(../images/icons/gallery-white.svg);
+				margin-right: 5px;
+				vertical-align: middle;
 			}
 			&:after{
 				content: ' nuotraukų';
@@ -241,6 +252,13 @@
 .g-banner{
 	margin-bottom: 13px;
 }
+.news-with-photo{
+	&:after{
+		content: url(../images/icons/gallery-green.svg);
+		vertical-align: sub;
+		margin-left: 5px;
+	}
+}
 .news{
 	&__item{
 		display: flex;
@@ -253,7 +271,7 @@
 		}
 	}
 	&__text{
-		font-size: 15px;
+		font-size: 16px;
 	}
 	&__img{
 		max-width: 185px;
@@ -263,13 +281,15 @@
 		margin-right: 16px;
 	}
 	&__header{
-		font-size: 20px;
+		display: inline-block;
+		font-size: 22px;
 		font-weight: $bold;
 		margin-bottom: 7px;
 		color: #000;
 		line-height: 1.1;
+		width: 100%;
 		&:hover{
-			text-decoration: none;
+			text-decoration: underline;
 			color: #000;
 		}
 	}
@@ -277,12 +297,23 @@
 		font-size: 12px;
 		color: $newsDescr;
 		margin-bottom: 8px;
+		display: inline-block;
+	}
+	&__comment{
+		display: inline-block;
+		font-size: 14px;
+		color: $newsDescr;
+		&:before{
+			content: url(../images/icons/comments.svg);
+			vertical-align: sub;
+			margin-right: 4px;
+		}
 	}
 	&__read-more{
 		color: $textLime;
 		text-decoration: underline;
 		&:hover{
-			color: $textLime;
+			color: darken($textLime,10%);
 		}
 	}
 }
@@ -324,9 +355,6 @@
 		}
 	}
 	.main{
-		&__img{
-			max-width: 430px;
-		}
 		&__tag{
 			text-transform: uppercase;
 			font-size: 12px;
@@ -342,6 +370,7 @@
 .side-menu{
 	margin-bottom: 24px;
 	border: 1px solid $borderGrey;
+	font-size: 15px;
 	&__link{
 		padding: 7px;
 		display: inline-block;
@@ -385,59 +414,52 @@
 .main-content{
 	padding-bottom: 100px;
 }
-.left-banner-column .chosen-conteiner{
-	transition: all .3s;
+.selectize-control.select-mobile-only.single{
+	display: none;
 }
-.left-banner-column .chosen-container-single .chosen-single div b{
-	background: url('../images/icons/triangle.png') no-repeat center center;
-}
-.left-banner-column .chosen-container-single .chosen-single{
+.selectize-input.items.full.has-options.has-items{
 	border-radius: 0px;
-	margin-bottom: 22px;
 	background: $LightGreyBG;
 	border: 1px solid $borderGrey;
-	box-shadow: none;
-	padding: 8px 18px 8px 13px;
-	height: auto;
 	font-size: 16px;
 	color: $Brown;
 	font-weight: $regular;
-	&:hover{
-		color: $Brown;
-	}
-}
-.left-banner-column .chosen-container{
-	display: none;
-}
-.left-banner-column .chosen-container-active.chosen-with-drop .chosen-single div{
-	transform: rotate(180deg);
-	transition: all .3s;
-}
-.left-banner-column .chosen-container-single .chosen-single div{
-	right: 11px;
-}
-.left-banner-column .chosen-container-single .chosen-drop{
-	margin-top: -23px;
-	border: 1px solid $borderGrey;
 	box-shadow: none;
 }
-.left-banner-column .chosen-container .chosen-results{
-	padding: 0;
-	margin: 0;
+.selectize-control.single .selectize-input:after{
+	border-color: black transparent transparent;
 }
-.left-banner-column .chosen-container .chosen-results li{
-	padding: 6px 13px;
+.selectize-control.single .selectize-input.dropdown-active:after{
+	border-color: transparent transparent black;
+}
+.selectize-dropdown [data-selectable]{
+	padding: 7px 13px;
 	color: $Brown;
 }
-.left-banner-column .chosen-container .chosen-results li.highlighted{
+.selectize-dropdown .active{
 	background: $Brown;
 	color: #fff;
 }
-@media only screen and (max-width: 480px){
-	.left-banner-column .chosen-container{
-		display: block;
-	}
+.selectize-dropdown-content{
+	height: auto;
+	max-height: 400px;
+}
+.news__link{
+	display: inline-block;
+	width: 100%;
+}
+
+@media only screen and (max-width: 991px){
+/* 	.left-banner-column .chosen-container{
+	display: block;
+} */
 	.side-menu{
 		display: none;
+	}
+	.m-banner{
+		padding-top: 15px;
+	}
+	.selectize-control.select-mobile-only.single{
+		display: block;
 	}
 }
