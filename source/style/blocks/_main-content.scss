@@ -238,7 +238,7 @@
 			&:before{
 				content: url(../images/icons/gallery-white.svg);
 				margin-right: 5px;
-				vertical-align: middle;
+				vertical-align: sub;
 			}
 			&:after{
 				content: ' nuotraukų';
@@ -258,6 +258,9 @@
 		vertical-align: sub;
 		margin-left: 5px;
 	}
+}
+.news__list .news__header{
+	display: inline-block;
 }
 .news{
 	&__item{
@@ -281,7 +284,6 @@
 		margin-right: 16px;
 	}
 	&__header{
-		display: inline-block;
 		font-size: 22px;
 		font-weight: $bold;
 		margin-bottom: 7px;
@@ -289,7 +291,6 @@
 		line-height: 1.1;
 		width: 100%;
 		&:hover{
-			text-decoration: underline;
 			color: #000;
 		}
 	}
@@ -297,7 +298,7 @@
 		font-size: 12px;
 		color: $newsDescr;
 		margin-bottom: 8px;
-		display: inline-block;
+		display: inline;
 	}
 	&__comment{
 		display: inline-block;
@@ -329,9 +330,6 @@
 		padding-bottom: 22px;
 		margin-bottom: 14px;
 		border-bottom: 3px solid $borderGrey;
-	}
-	.news__header{
-		line-height: 1.1;
 	}
 	&-element{
 		width: 50%;
@@ -445,14 +443,19 @@
 	max-height: 400px;
 }
 .news__link{
-	display: inline-block;
 	width: 100%;
 }
 
 @media only screen and (max-width: 991px){
-/* 	.left-banner-column .chosen-container{
-	display: block;
-} */
+	.news__link{
+		display: inline-block;
+	}
+	.news__header{
+		display: inline-block;
+	}
+	.news__description{
+		display: inline-block;
+	}
 	.side-menu{
 		display: none;
 	}

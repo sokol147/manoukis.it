@@ -119,6 +119,7 @@
 		var newsBlock = [
 			{
 				newsBlockLink: 'link-1',
+				newsBlockComment: '(5)',
 				newsBlockImg: 'news-block-1.png',
 				newsBlockHeader: 'Supirkimo kainos per metus padidėjo 12,6 proc.',
 				newsBlockDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
@@ -126,6 +127,7 @@
 			},{
 				newsBlockLink: 'link-2',
 				newsBlockImg: 'news-block-2.png',
+				newsBlockComment: '(1)',
 				newsBlockHeader: 'Šiemet nustatyti aštuoni glifosato netinkamo naudojimo atvejai',
 				newsBlockDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
 				newsBlockText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
@@ -204,6 +206,7 @@
 										img.news-block__img(src=`templates/images/newsList/${item.newsBlockImg}`)
 										p.news__header= item.newsBlockHeader
 									p.news__description= item.newsBlockDescr
+									p.news__comment= item.newsBlockComment
 									p.news__text= item.newsBlockText
 										a.news__read-more(href=`${item.newsBlockLink}`) Daugiau
 

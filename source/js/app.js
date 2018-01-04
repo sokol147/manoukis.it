@@ -4,4 +4,6 @@ $(document).ready(function() {
 		$('.nav-wrapper').toggleClass('open');
 	})
 	$('.select-mobile-only').selectize();
+	let newsImgWidth = $('.figure-img').width();
+	$('.figure-descr').width(newsImgWidth);
 });
