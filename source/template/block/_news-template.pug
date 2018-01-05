@@ -197,15 +197,13 @@
 						ul.gallery__list
 							each galleryImg, galleryLink in galleryList
 								li.gallery__item
-									a.gallery__link(href=`${galleryLink}`)
+									a.gallery__link(href=`templates/images/news-gallery/${galleryImg}` data-toggle='lightbox' data-gallery='example-gallery')
 										img.gallery__img(src=`templates/images/news-gallery/${galleryImg}`)
 					.news__share
 						a(href='#').news__print= newsPrint
 						.news__counter
-						//- ul.news__soical
-						//- 	each item in newsSocial
-						//- 		li.share__item
-						//- 			a.share__link(href=``)
+							img.desk-share(src='templates/images/share/share-d.png')
+							img.mob-share(src='templates/images/share/share-m.png')
 					form.form-upload
 						p.upload__header= uploadHeader
 						p.upload__descr= uploadDescr
@@ -215,16 +213,16 @@
 							input.form-field
 						.upload__file-select
 							p.select__header= fileSelectHeader
-							label.select__label= fileSelectBtn
-								input.select__input(type='file' size='20')
+							input.select__input(type='file' size='20')
 				.g-banner
 					a.g-banner__link(href=`${gBannerLink}`)
 						img.g-banner__img(src=`templates/images/mBanners/${gBannerImg}`)
 				.comments
 					p.comments__counter= commentsCounter
 					form.comments__form
-						p.comments__descr= commentMessage
-							span= commentMessageSpan
+						p.comments__descr
+							span Dėmesio! 
+							| Atsakomybė už komentarų turinį tenka patiems komentuotojams.
 						p.comments__descr= commentMessageTwo
 						.comments__inputs
 							input.form-field(type='text' placeholder='Jūsų vardas')
