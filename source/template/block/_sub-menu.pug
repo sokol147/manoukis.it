@@ -1,0 +1,21 @@
+-
+		var subMenu = {
+			'link1':'Augalininkystė',
+			'link2':'Paslaugos',
+			'link3':'Gyvulininkystė',
+			'link4':'Kita',
+			'link5':'Nekilnojamasis Turtas',
+			'link6':'Technika',
+			'link6':'Žemės ūkio produktai'
+		}
+.sub-menu
+	.container
+		.row
+			.col-12
+				.sub-menu__wrapper
+					a(href='index.html').home__link
+						img(src='templates/images/icons/home.png')
+					ul.sub-menu__list
+						each subItem, subLink in subMenu
+							li.sub-menu__item
+								a.sub-menu__link(href=`${subLink}`)= subItem

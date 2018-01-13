@@ -1,0 +1,150 @@
+.banner-top{
+	display: flex;
+	padding-bottom: 20px;
+	.m-banner{
+		margin-bottom: 0;
+		margin-right: 15px;
+		&__img{
+			height: 100%;
+		}
+	}
+	.subscription{
+		margin-bottom: 0;
+		width: 300px;
+	}
+}
+.news{
+	&-section{
+		background-color: $LightGreyBG;
+		padding: 23px 19px 14px;
+		display: flex;
+		margin-bottom: 25px;
+		&__header{
+			font-size: 17px;
+			font-weight: $bold;
+			margin-bottom: 10px;
+			&-link{
+				color: #000;
+				&:hover{
+					color: #000;
+				}
+			}
+		}
+		&__counter{
+			color: $newsDescr;
+		}
+		&__wrapper{
+			margin-bottom: 20px;
+		}
+		&__link{
+			font-size: 14px;
+			font-weight: $regular;
+			color: $Brown;
+			text-decoration: underline;
+			&:hover{
+				color: darken($Brown, 10%);
+			}
+		}
+		&__column{
+			width: 25%;
+			margin-right: 20px;
+			&:nth-child(4n){
+				margin-right: 0;
+			}
+		}
+	}
+}
+.last-announcments{
+	margin-bottom: 22px;
+}
+.last-announcment{
+	&__wrapper{
+		display: flex;
+	}
+	&__search{
+		width: 50%;
+		margin-right: 25px;
+	}
+	&__invite{
+		width: 50%;
+	}
+	&__header{
+		text-transform: uppercase;
+		font-size: 19px;
+		font-weight: $medium;
+		color: $Brown;
+		margin-bottom: 13px;
+	}
+}
+.announcment{
+	&__header{
+		font-size: 16px;
+		font-weight: $medium;
+		text-transform: uppercase;
+		color: #fff;
+		height: 36px;
+		line-height: 36px;
+		padding-left: 16px;
+	}
+	&__search{
+		background-color: $green;
+	}
+	&__invite{
+		background-color: $Lime;
+	}
+	&__list{
+		border: 1px solid $borderGrey;
+		padding: 17px 25px 17px 16px;
+		min-height: 800px;
+	}
+	&__item{
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 25px;
+	}
+	&__img{
+		margin-right: 12px;
+	}
+	&__link{
+		color: #000;
+		&:hover{
+			color: #000;
+		}
+	}
+	&__head{
+		font-size: 16px;
+		font-weight: $bold;
+		margin-bottom: 5px;
+	}
+	&__descr{
+		display: flex;
+		margin-bottom: 5px;
+		align-items: center;
+	}
+	&__type{
+		font-size: 13px;
+		margin-right: 5px;
+		border-radius: 5px;
+		padding: 1px 7px;
+	}
+	&__date{
+		font-size: 14px;
+		color: $newsDescr;
+		margin-right: 5px;
+	}
+	&__topic{
+		font-size: 14px;
+		color: $newsDescr;
+	}
+	&__text{
+		margin-bottom: 5px;
+	}
+}
+.type{
+	&__search{
+		border: 1px solid $green;
+	}
+	&__invite{
+		border: 1px solid $Lime;
+	}
+}

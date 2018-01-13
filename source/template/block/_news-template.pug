@@ -1,37 +1,3 @@
--
-		var leftBanners = {
-			'#lbanner-1':'lbanner-1.png',
-			'#lbanner-2':'lbanner-2.png',
-			'#lbanner-3':'lbanner-3.png',
-			'#lbanner-4':'lbanner-4.png',
-			'#lbanner-5':'lbanner-5.png',
-			'#lbanner-6':'lbanner-6.png',
-			'#lbanner-7':'lbanner-7.png',
-			'#lbanner-8':'lbanner-8.png',
-		}
-- var rBannerTopLink = '#rbanner-top'
-- var rNammerTopImg = 'rbanner-top.png'
--
-		var rightBanners = {
-			'#rbanner-1':'rbanner-1.png',
-			'#rbanner-2':'rbanner-2.png',
-		}
-
-
-- var subText = 'Naujienų prenumerata'
-- var subBtnText = 'Prenumeruoti'
-- var appearanceHeader = 'Apklausa'
-- var appearanceQuestion = 'Ar balsuosite už Arūną Karbauskį prezidento rinkimuose?'
-- var appearanceAnswer = ['Taip, balsuosiu','Nebalsuosiu','Nežinau']
-- var appearenceBtnText = 'Atsakyti'
-- var weatherHeader = 'Orai'
-- var businessInfoHeader = 'Verslo informacija'
--
-		var businessNews ={
-			'/link1':'Šiemet nustatyti aštuoni glifosato netinkamo naudojimo atvejai',
-			'/link2':'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-			'/link3':'Mineralinio azoto dirvožemyje - ypatingai mažai'
-		}
 - var advertisingHeader = 'Reklama'
 -
 		var advertising = {
@@ -45,13 +11,7 @@
 
 - var gBannerLink = 'g-link'
 - var gBannerImg = 'gbanner-1.png'
--
-		var subMenu = {
-			'link1':'Agropolitika',
-			'link2':'Pasaulyje',
-			'link3':'Ūkis',
-			'link4':'Rinka'
-		}
+
 - var newsTopic = 'Agropolitika'
 - var newsHeader = 'Naujasis NŽT vadovas žada užbaigti žemės reformą ir susidoroti su korupcija'
 - var newsDate = '2018-01-02'
@@ -138,33 +98,8 @@
 .main-content
 	.container
 		.row
-			.col-lg-2.left-banner-column
-				ul.side-menu
-					li.side-menu__item
-						a.side-menu__link.side-menu__link-active(href='#') Naujienos
-						ul.side-menu__sub
-							each subItem, subLink in subMenu
-								li.sub__item
-									a.sub__link(href=`${subLink}`)= subItem
-					li.side-menu__item
-						a.side-menu__link(href='#') MANO ŪKIS, žurnalas
-					li.side-menu__item
-						a.side-menu__link(href='#') Spaudos centras
-				select.select-mobile-only
-					option Naujienos
-					option Agropolitika
-					option Pasaulyje
-					option Ūkis
-					option Rinka
-					option MANO ŪKIS, žurnalas
-					option Spaudos centras
-
-				.banner-block-l
-					ul.left-banner
-						each lBannerImg,lBannerLink in leftBanners
-							li.left-banner__item
-								a.left-banner__link(href=`${lBannerLink}`)
-									img.left-banner__img(src=`templates/images/lBanners/${lBannerImg}`)
+			.col-lg-2
+				include ../block/_small-side-bar
 
 			.col-lg-7.main-news
 
@@ -261,42 +196,5 @@
 							li.also-read__item
 								a.also-read__link(href=`${alsoReadLink}`)=alsoReadText
 
-			.col-lg-3.right-banner-column
-				.right-banner.right-banner-top
-					a.right-banner__link(href=`${rBannerTopLink}`)
-						img.right-banner__img(src=`templates/images/rBanners/${rNammerTopImg}`)
-
-				form.subscription
-					p.subscription__text=subText
-					input.subscription__input(type='text' placeholder='Jūsų el. pašto adresas')
-					a.btn-sub=subBtnText
-				.right-banner.right-banner-group
-					ul.right-banner
-						each rBannerImg,rBannerLink in rightBanners
-							li.right-banner__item
-								a.right-banner__link(href=`${rBannerLink}`)
-									img.right-banner__img(src=`templates/images/rBanners/${rBannerImg}`)
-				.appearance.widget
-					.appearance__header.widget__header=appearanceHeader
-					form.appearance__question-wrapper
-						.appearance__question=appearanceQuestion
-						ul.appearance__answer.answer
-							each item in appearanceAnswer
-								li.answer__item
-									label.answer__label.label--radio=item
-										input.answer__input.radio(type='radio' name='question')
-						a.btn-appearance=appearenceBtnText
-				.weather.widget
-					.widget__header=weatherHeader
-				.business-info.widget
-					.business-info__header.widget__header.widget__header-green=businessInfoHeader
-					ul.business-news
-						each businesNewsName, businessNewsLink in businessNews
-							li.business-news__item
-								a.business-news__link(href=`${businessNewsLink}`)=businesNewsName
-				.advertising.widget
-					.advertising__header.widget__header=advertisingHeader
-					ul.advertising__list
-						each advertisingName, advertisingLink in advertising
-							li.advertising__item
-								a.advertising__link(href=`${advertisingLink}`)=advertisingName
+			.col-lg-3
+				include ../block/_big-side-bar

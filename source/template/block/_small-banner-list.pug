@@ -1,0 +1,17 @@
+-
+		var leftBanners = {
+			'#lbanner-1':'lbanner-1.png',
+			'#lbanner-2':'lbanner-2.png',
+			'#lbanner-3':'lbanner-3.png',
+			'#lbanner-4':'lbanner-4.png',
+			'#lbanner-5':'lbanner-5.png',
+			'#lbanner-6':'lbanner-6.png',
+			'#lbanner-7':'lbanner-7.png',
+			'#lbanner-8':'lbanner-8.png',
+		}
+.banner-block-l
+	ul.left-banner
+		each lBannerImg,lBannerLink in leftBanners
+			li.left-banner__item
+				a.left-banner__link(href=`${lBannerLink}`)
+					img.left-banner__img(src=`templates/images/lBanners/${lBannerImg}`)

@@ -1,0 +1,74 @@
+.search{
+	padding: 20px 0 18px;
+	&__input{
+		height: 100%;
+		border: none;
+		width: 100%;
+		font-weight: $regular;
+		padding-left: 24px;
+		font-size: 16px;
+		outline: none;
+	}
+	&__btn{
+		background-color: $Lime;
+		display: inline-block;
+		text-align: center;
+		text-transform: uppercase;
+		width: 133px;
+		font-size: 15px;
+		padding: 13px 0 12px;
+		color: #fff;
+		font-weight: $medium;
+		transition: all .3s;
+		border: 1px solid $Lime;
+		&:hover{
+			color: #fff;
+			text-decoration: none;
+			background-color: darken($Lime, 10%);
+			border: 1px solid darken($Lime, 10%);
+		}
+		&:before{
+			content: url(../images/icons/search.png);
+			margin-right: 10px;
+			vertical-align: sub;
+		}
+	}
+	&__wrapper{
+		display: flex;
+	}
+	&__container{
+		background-color: $yellow;
+		padding: 16px 16px 15px;
+		border-right: 2px solid rgba(#fff, .4);
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+	&__add{
+		background-color: $yellow;
+		padding: 16px 16px 15px;
+	}
+	&__advertising{
+		background-color: $Brown;
+		display: inline-block;
+		color: #fff;
+		font-size: 15px;
+		padding: 13px 0 12px;
+		font-weight: $medium;
+		width: 225px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: all .3s;
+		&:before{
+			content: url(../images/icons/plus.png);
+			margin-right: 10px;
+			vertical-align: sub;
+			transition: all .3s;
+		}
+		&:hover{
+			text-decoration: none;
+			color: #fff;
+			background-color: darken($Brown, 10%);
+		}
+	}
+}
