@@ -1,14 +1,3 @@
--
-		var leftBanners = {
-			'#lbanner-1':'lbanner-1.png',
-			'#lbanner-2':'lbanner-2.png',
-			'#lbanner-3':'lbanner-3.png',
-			'#lbanner-4':'lbanner-4.png',
-			'#lbanner-5':'lbanner-5.png',
-			'#lbanner-6':'lbanner-6.png',
-			'#lbanner-7':'lbanner-7.png',
-			'#lbanner-8':'lbanner-8.png',
-		}
 - var rBannerTopLink = '#rbanner-top'
 - var rNammerTopImg = 'rbanner-top.png'
 -
@@ -18,8 +7,6 @@
 		}
 
 
-- var subText = 'Naujienų prenumerata'
-- var subBtnText = 'Prenumeruoti'
 - var appearanceHeader = 'Apklausa'
 - var appearanceQuestion = 'Ar balsuosite už Arūną Karbauskį prezidento rinkimuose?'
 - var appearanceAnswer = ['Taip, balsuosiu','Nebalsuosiu','Nežinau']
@@ -41,220 +28,33 @@
 			'/link4':'Specialieji žurnalų priedai',
 		}
 
--
-		var newsList =[
-			{
-				newsListLink: 'link-1',
-				newsListComment: '(5)',
-				newsListImg: 'news-1.png',
-				newsListHeader: 'Mineralinio azoto dirvožemyje - ypatingai mažai',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-2',
-				newsListComment: '(10)',
-				newsListImg: 'news-2.png',
-				newsListHeader: 'NMA planai: nuo kontrolės prie prevencijos',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Hanoveris/Kaunas. Europos žemės ūkio technikos gamintojų asociacijos CEMA verslo barometras rodo, kad žemės ūkio mašinų pramonė nuo 2017 m. pirmojo ketvirčio perėjo į spartaus augimo fazę ir beveik atkartoja 2011 m. '
-			},{
-				newsListLink: 'link-3',
-				newsListComment: '(20)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-4',
-				newsListImg: 'news-4.png',
-				newsListHeader: 'Mineralinio azoto dirvožemyje - ypatingai mažai',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-5',
-				newsListComment: '(8)',
-				newsListImg: 'news-1.png',
-				newsListHeader: 'Mineralinio azoto dirvožemyje - ypatingai mažai',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-6',
-				newsListComment: '(4)',
-				newsListImg: 'news-2.png',
-				newsListHeader: 'NMA planai: nuo kontrolės prie prevencijos',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Hanoveris/Kaunas. Europos žemės ūkio technikos gamintojų asociacijos CEMA verslo barometras rodo, kad žemės ūkio mašinų pramonė nuo 2017 m. pirmojo ketvirčio perėjo į spartaus augimo fazę ir beveik atkartoja 2011 m. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			},{
-				newsListLink: 'link-7',
-				newsListComment: '(1)',
-				newsListImg: 'news-3.png',
-				newsListHeader: 'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
-				newsListDescr: 'Lapkričio 30d., šeštadienis  Mokslas',
-				newsListText: 'Vilnius. Žemės ūkio ministerija praneša, kad šio rudens mineralinio azoto tyrimų rezultatai nėra džiuginantys, tačiau tai galima buvo prognozuoti atsižvelgus į itin gausius kritulius. '
-			}
-		]
-
--
-		var subMenu = {
-			'link1':'Agropolitika',
-			'link2':'Pasaulyje',
-			'link3':'Ūkis',
-			'link4':'Rinka'
-		}
-- var mBannerLink = 'link1'
-- var mBannerImg = 'mbanner-1.png'
 - var newsTopic = 'Agropolitika'
 
 .main-content
 	.container
 		.row
-			.col-lg-2.left-banner-column
-				ul.side-menu
-					li.side-menu__item
-						a.side-menu__link.side-menu__link-active(href='#') Naujienos
-						ul.side-menu__sub
-							each subItem, subLink in subMenu
-								li.sub__item
-									a.sub__link(href=`${subLink}`)= subItem
-					li.side-menu__item
-						a.side-menu__link(href='#') MANO ŪKIS, žurnalas
-					li.side-menu__item
-						a.side-menu__link(href='#') Spaudos centras
-				select.select-mobile-only
-					option Naujienos
-					option Agropolitika
-					option Pasaulyje
-					option Ūkis
-					option Rinka
-					option MANO ŪKIS, žurnalas
-					option Spaudos centras
-
-				.banner-block-l
-					ul.left-banner
-						each lBannerImg,lBannerLink in leftBanners
-							li.left-banner__item
-								a.left-banner__link(href=`${lBannerLink}`)
-									img.left-banner__img(src=`templates/images/lBanners/${lBannerImg}`)
+			.col-lg-2
+				.left-banner-column
+					include ../block/_l-side-menu
+					select.select-mobile-only
+						option Naujienos
+						option Agropolitika
+						option Pasaulyje
+						option Ūkis
+						option Rinka
+						option MANO ŪKIS, žurnalas
+						option Spaudos centras
+					
+					include ../block/_small-banner-list
 
 			.col-lg-7.main-news
 
-				.m-banner
-					a.m-banner__link(href=`${mBannerLink}`)
-						img.m-banner__img(src=`templates/images/mBanners/${mBannerImg}`)
+				include ../block/_m-banner
 
 				.news__topic= newsTopic
-				.article-list
-					ul.news__list
-						each item in newsList
-							li.news__item
-								a.news__img-link(href=`${item.newsListLink}`)
-									img.news__img(src=`templates/images/newsList/${item.newsListImg}`)
-								.news__content
-									a.news__header(href=`${item.newsListLink}`)= item.newsListHeader
-									p.news__description.news-with-photo= item.newsListDescr
-									p.news__comment= item.newsListComment
-									p.news__text= item.newsListText
-										a.news__read-more(href=`${item.newsListLink}`) Daugiau
-					ul.pagination-mob
-						li.mob__item
-							a.mob__link.mob__link-prev(href='#') Ankstesnis
-						li.mob__item
-							a.mob__link.mob__link-next(href='#') Sekantis
-
-					ul.pagination
-						li.pagination__item.pagination-prev
-							a.pagination__link.pagination__link-prev(href='#')
-								i.fa.fa-angle-left
-						li.pagination__item
-							a.pagination__link(href='#') 1
-						li.pagination__item
-							a.pagination__link(href='#') 2
-						li.pagination__item
-							a.pagination__link(href='#') 3
-						li.pagination__item
-							a.pagination__link(href='#') 4
-						li.pagination__item
-							a.pagination__link(href='#') 5
-						li.pagination__item
-							a.pagination__link(href='#') ...
-						li.pagination__item
-							a.pagination__link(href='#') 45
-						li.pagination__item
-							a.pagination__link(href='#') 46
-						li.pagination__item
-							a.pagination__link(href='#') 47
-						li.pagination__item
-							a.pagination__link(href='#') 48
-						li.pagination__item
-							a.pagination__link(href='#') 49
-						li.pagination__item
-							a.pagination__link(href='#') 50
-						li.pagination__item.pagination-next
-							a.pagination__link.pagination__link-next(href='#')
-								i.fa.fa-angle-right
+				include ../block/_article-list-items
+				
+				include ../block/_pagination
 
 
 
@@ -262,11 +62,9 @@
 				.right-banner.right-banner-top
 					a.right-banner__link(href=`${rBannerTopLink}`)
 						img.right-banner__img(src=`templates/images/rBanners/${rNammerTopImg}`)
+				
+				include ../block/_form-sub
 
-				form.subscription
-					p.subscription__text=subText
-					input.subscription__input(type='text' placeholder='Jūsų el. pašto adresas')
-					a.btn-sub=subBtnText
 				.right-banner.right-banner-group
 					ul.right-banner
 						each rBannerImg,rBannerLink in rightBanners

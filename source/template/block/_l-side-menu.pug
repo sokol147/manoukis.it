@@ -1,0 +1,18 @@
+-
+		var subMenu = {
+			'link1':'Agropolitika',
+			'link2':'Pasaulyje',
+			'link3':'Ūkis',
+			'link4':'Rinka'
+		}
+ul.side-menu
+		li.side-menu__item
+			a.side-menu__link.side-menu__link-active(href='#') Naujienos
+		ul.side-menu__sub
+			each subItem, subLink in subMenu
+				li.sub__item
+					a.sub__link(href=`${subLink}`)= subItem
+		li.side-menu__item
+			a.side-menu__link(href='#') MANO ŪKIS, žurnalas
+		li.side-menu__item
+			a.side-menu__link(href='#') Spaudos centras

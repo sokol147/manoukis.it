@@ -28,14 +28,7 @@
 			'/link2':'Žemės ūkio mašinų pramonės tendencijos: nuo neigiamų iki teigiamų',
 			'/link3':'Mineralinio azoto dirvožemyje - ypatingai mažai'
 		}
-- var advertisingHeader = 'Reklama'
--
-		var advertising = {
-			'/link1':'Žurnalas „Mano ūkis“ ',
-			'/link2':'Žurnalas „Vetinfo“',
-			'/link3':'Žurnalas „Mano gyvenimas“',
-			'/link4':'Specialieji žurnalų priedai',
-		}
+
 - var galleriesHeader = 'Galerijos'
 -
 		var gallery =[
@@ -51,11 +44,6 @@
 				counter: '25'
 			}
 		]
-
-
-
-- var gBannerLink = 'g-link'
-- var gBannerImg = 'gbanner-1.png'
 
 -
 		var newsList =[
@@ -152,10 +140,7 @@
 				include ../block/_small-side-bar
 
 			.col-lg-7.main-news
-
-				.m-banner
-					a.m-banner__link(href=`${mBannerLink}`)
-						img.m-banner__img(src=`templates/images/mBanners/${mBannerImg}`)
+				include ../block/_m-banner
 
 				.news-block
 						.news-block-big
@@ -179,10 +164,7 @@
 									p.news__comment= item.newsBlockComment
 									p.news__text= item.newsBlockText
 										a.news__read-more(href=`${item.newsBlockLink}`) Daugiau
-
-				.g-banner
-					a.g-banner__link(href=`${gBannerLink}`)
-						img.g-banner__img(src=`templates/images/mBanners/${gBannerImg}`)
+				include ../block/_g-banner
 
 				.galleries
 					.galleries__header=galleriesHeader

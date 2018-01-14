@@ -1,0 +1,24 @@
+- var adsListingHeader = 'Augalinikyste'
+- var adsListingCounter = '(2450)'
+- var sortByHeader = 'Rodyti:'
+-
+		var sortBy = [
+			{
+				filter: 'Visi skelbimai',
+				active: 'active'
+			},{
+				filter: 'Siūlo',
+				active: ''
+			},{
+				filter: 'Ieško',
+				active: ''
+			}
+		]
+h4.ads-list__header= adsListingHeader
+	span.ads-list__counter= adsListingCounter
+.ads-list__sort
+	.sort__header= sortByHeader
+	ul.sort__list
+		each item in sortBy
+			li.sort__item
+				a.sort__link(href='#' class=`${item.active}`)= item.filter

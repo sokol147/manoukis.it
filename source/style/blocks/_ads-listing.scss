@@ -1,0 +1,52 @@
+.ads__listing{
+	.announcment__item{
+		border-bottom: 1px solid $borderGrey;
+		padding-bottom: 25px;
+	}
+}.ads-list{
+	&__header{
+		text-transform: uppercase;
+		color: $Brown;
+		border-bottom: 5px solid $Brown;
+		padding-bottom: 9px;
+		font-size: 21px;
+		font-weight: $medium;
+		margin-bottom: 20px;
+	}
+	&__counter{
+		margin-left: 5px;
+		color: $newsDescr;
+	}
+	&__sort{
+		padding-bottom: 18px;
+		margin-bottom: 24px;
+		border-bottom: 1px solid $borderGrey;
+		display: flex;
+	}
+	.sort{
+		&__header{
+			font-size: 15px;
+			margin-right: 5px;
+			color: $newsDescr;
+		}
+		&__list{
+			display: flex;
+		}
+		&__link{
+			color: $Lime;
+			font-weight: $regular;
+			&.active, &:hover{
+				color: #000;
+			}
+		}
+		&__item{
+			border-right: 2px solid $borderGrey;
+			margin-right: 8px;
+			padding-right: 8px;
+			&:last-child{
+				border-right: none;
+				margin-right: 0;
+			}
+		}
+	}
+}

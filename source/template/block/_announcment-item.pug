@@ -1,0 +1,11 @@
+li.announcment__item
+	img.announcment__img(src=`templates/images/announcment/${item.img}`)
+	.announcment__info
+		a.announcment__link(href=`${item.link}`)
+			.announcment__head= item.header
+		.announcment__descr
+			.announcment__type(class=`type__${item.classType}`)= item.type
+			.announcment__date= item.date
+			.announcment__topic= item.topic
+		.announcment__text= item.text
+		a.news__read-more(href=`${item.link}`) Daugiau

@@ -1,22 +1,5 @@
--
-		var subMenu = {
-			'link1':'Agropolitika',
-			'link2':'Pasaulyje',
-			'link3':'Ūkis',
-			'link4':'Rinka'
-		}
 .left-banner-column
-	ul.side-menu
-		li.side-menu__item
-			a.side-menu__link.side-menu__link-active(href='#') Naujienos
-		ul.side-menu__sub
-			each subItem, subLink in subMenu
-				li.sub__item
-					a.sub__link(href=`${subLink}`)= subItem
-		li.side-menu__item
-			a.side-menu__link(href='#') MANO ŪKIS, žurnalas
-		li.side-menu__item
-			a.side-menu__link(href='#') Spaudos centras
+	include ../block/_l-side-menu
 	select.select-mobile-only
 		option Naujienos
 		option Agropolitika
@@ -26,9 +9,3 @@
 		option MANO ŪKIS, žurnalas
 		option Spaudos centras
 	include ../block/_small-banner-list
-	//- .banner-block-l
-	//- 	ul.left-banner
-	//- 		each lBannerImg,lBannerLink in leftBanners
-	//- 			li.left-banner__item
-	//- 				a.left-banner__link(href=`${lBannerLink}`)
-	//- 					img.left-banner__img(src=`templates/images/lBanners/${lBannerImg}`)

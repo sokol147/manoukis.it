@@ -143,8 +143,12 @@
 .type{
 	&__search{
 		border: 1px solid $green;
+		color: $green;
+		font-weight: $bold;
 	}
 	&__invite{
 		border: 1px solid $Lime;
+		color: $Lime;
+		font-weight: $bold;
 	}
 }

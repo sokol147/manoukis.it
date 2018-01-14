@@ -21,17 +21,20 @@
 		}
 - var mBannerLink = 'link1'
 - var mBannerImg = 'mbanner-1.png'
-- var subText = 'Naujienų prenumerata'
-- var subBtnText = 'Prenumeruoti'
+- var advertisingHeader = 'Reklama'
+-
+		var advertising = {
+			'/link1':'Žurnalas „Mano ūkis“ ',
+			'/link2':'Žurnalas „Vetinfo“',
+			'/link3':'Žurnalas „Mano gyvenimas“',
+			'/link4':'Specialieji žurnalų priedai',
+		}
 .right-banner-column
 	.right-banner.right-banner-top
 		a.right-banner__link(href=`${rBannerTopLink}`)
 			img.right-banner__img(src=`templates/images/rBanners/${rNammerTopImg}`)
 
-	form.subscription
-		p.subscription__text=subText
-		input.subscription__input(type='text' placeholder='Jūsų el. pašto adresas')
-		a.btn-sub=subBtnText
+	include ../block/_form-sub
 	.right-banner.right-banner-group
 		ul.right-banner
 			each rBannerImg,rBannerLink in rightBanners

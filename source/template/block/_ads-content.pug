@@ -1,8 +1,3 @@
-- var mBannerLink = 'link1'
-- var mBannerImg = 'mbanner-1.png'
-- var subText = 'Naujienų prenumerata'
-- var subBtnText = 'Prenumeruoti'
-
 - var sectionNewsHeaderOne = 'Augalininkystė'
 - var sectionNewsHeaderOneCounter = ' (2450)'
 -
@@ -84,6 +79,7 @@
 		var announcmentSearchList = [
 			{
 				img: 'announcment-1.png',
+				classType: 'search',
 				link: 'link1',
 				header: 'Parduodu vikius',
 				type: 'Siūlo',
@@ -92,6 +88,7 @@
 				text: 'Parduodu vikius. Išvalyti, sausi, daigūs. Kaina 400 eurų tona. Ukmergės raj. 862200227 ',
 			},{
 				img: 'announcment-1.png',
+				classType: 'search',
 				link: 'link2',
 				header: 'Cukriniai runkeliai',
 				type: 'Siūlo',
@@ -100,6 +97,7 @@
 				text: 'Parduodu cukrinius runkelius yra prikasta apie 150t.'
 			},{
 				img: 'announcment-1.png',
+				classType: 'search',
 				link: 'link3',
 				header: 'Avižos, žirniai, grikiai',
 				type: 'Siūlo',
@@ -108,6 +106,7 @@
 				text: 'Parduodu avižas -100 t. , grikius - 3 t. , žirnius -6 t. . Varėnos r.'
 			},{
 				img: 'announcment-1.png',
+				classType: 'search',
 				link: 'link4',
 				header: 'Avižos, žirniai, grikiai',
 				type: 'Siūlo',
@@ -116,6 +115,7 @@
 				text: 'Parduodu avižu-vikiu misinį, avižas, mežius, grudai tinka seklai išvaliti Šalčininkų raj.'
 			},{
 				img: 'announcment-1.png',
+				classType: 'search',
 				link: 'link5',
 				header: 'Avižos, žirniai, grikiai',
 				type: 'Siūlo',
@@ -128,6 +128,7 @@
 		var announcmentInviteList = [
 			{
 				img: 'announcment-1.png',
+				classType: 'invite',
 				link: 'link11',
 				header: 'Perkame ekologiškus ir P2 statuso grūdus',
 				type: 'Ieško',
@@ -136,6 +137,7 @@
 				text: 'Nuolat superkame ekologines bei pereinamojo statuso avižas, kviečius, kvietrugius, rugius, speltą, ir kitus grūdus. Turime galimybę produkciją išvalyt, i',
 			},{
 				img: 'announcment-1.png',
+				classType: 'invite',
 				link: 'link21',
 				header: 'Brangiai perku kviecius',
 				type: 'Ieško',
@@ -144,6 +146,7 @@
 				text: 'Brangiai moku uz kviecius,issivezu savo transportu,iskarto atsiskaitom.'
 			},{
 				img: 'announcment-1.png',
+				classType: 'invite',
 				link: 'link31',
 				header: 'Avižos, žirniai, grikiai',
 				type: 'Ieško',
@@ -152,6 +155,7 @@
 				text: 'Parduodu avižas -100 t. , grikius - 3 t. , žirnius -6 t. . Varėnos r.'
 			},{
 				img: 'announcment-1.png',
+				classType: 'invite',
 				link: 'link41',
 				header: 'Avižos, žirniai, grikiai',
 				type: 'Ieško',
@@ -160,6 +164,7 @@
 				text: 'Parduodu avižu-vikiu misinį, avižas, mežius, grudai tinka seklai išvaliti Šalčininkų raj.'
 			},{
 				img: 'announcment-1.png',
+				classType: 'invite',
 				link: 'link51',
 				header: 'Avižos, žirniai, grikiai',
 				type: 'Ieško',
@@ -173,13 +178,8 @@
 		.row
 			.col-10
 				.banner-top
-					.m-banner
-						a.m-banner__link(href=`${mBannerLink}`)
-							img.m-banner__img(src=`templates/images/mBanners/${mBannerImg}`)
-					form.subscription
-						p.subscription__text=subText
-						input.subscription__input(type='text' placeholder='Jūsų el. pašto adresas')
-						a.btn-sub=subBtnText
+					include ../block/_m-banner
+					include ../block/_form-sub
 
 				.news-section
 					.news-section__column
@@ -242,33 +242,13 @@
 							.announcment__header.announcment__search= announcmentSearch
 							ul.announcment__list
 								each item in announcmentSearchList
-									li.announcment__item
-										img.announcment__img(src=`templates/images/announcment/${item.img}`)
-										.announcment__info
-											a.announcment__link(href=`${item.link}`)
-												.announcment__head= item.header
-											.announcment__descr
-												.announcment__type.type__search= item.type
-												.announcment__date= item.date
-												.announcment__topic= item.topic
-											.announcment__text= item.text
-											a.news__read-more(href=`${item.link}`) Daugiau
+									include ../block/_announcment-item
 
 						.last-announcment__invite
 							.announcment__header.announcment__invite= announcmentInvite
 							ul.announcment__list
 								each item in announcmentInviteList
-									li.announcment__item
-										img.announcment__img(src=`templates/images/announcment/${item.img}`)
-										.announcment__info
-											a.announcment__link(href=`${item.link}`)
-												.announcment__head= item.header
-											.announcment__descr
-												.announcment__type.type__invite= item.type
-												.announcment__date= item.date
-												.announcment__topic= item.topic
-											.announcment__text= item.text
-											a.news__read-more(href=`${item.link}`) Daugiau
+									include ../block/_announcment-item
 
 
 			.col-2

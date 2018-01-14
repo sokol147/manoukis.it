@@ -7,8 +7,8 @@
 	display: none;
 }
 @media only screen and (max-width: 600px){
-	.article-list .pagination{
-		display: none;
+	.pagination{
+		display: none !important;
 	}
 	.pagination-mob{
 		margin-bottom: 20px;
