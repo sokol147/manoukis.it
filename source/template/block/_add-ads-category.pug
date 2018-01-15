@@ -1,0 +1,17 @@
+-
+		var catagoryFilds = [
+			{
+				className: 'required',
+				label: 'Kategorija',
+				type: 'text'
+			},{
+				className: 'required',
+				label: 'Skelbimo antraštė',
+				type: 'text'
+			}
+		]
+ul.add-ads__category.category__list
+	each item in catagoryFilds
+		li.category__item
+			label.field-label(class=`${item.className}`)= item.label
+			input.field-input(type=`${item.type}`)

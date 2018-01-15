@@ -1,0 +1,84 @@
+.add-ads{
+	&__filds{
+		background-color: $LightGreyBG;
+		border: 1px solid $borderGrey;
+		padding: 15px;
+	}
+	&__confirm{
+		padding: 21px 0 30px;
+		background-color: $peach;
+		border-bottom: 1px solid $borderGrey;
+		border-left: 1px solid $borderGrey;
+		border-right: 1px solid $borderGrey;
+	}
+	&__rule{
+		margin-bottom: 29px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__list{
+		padding-bottom: 11px;
+		margin-bottom: 11px;
+		border-bottom: 1px solid $borderGrey;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+	}
+}
+.ads{
+	&__type{
+		margin-right: 5px;
+		outline: none;
+	}
+	&__label{
+		margin-bottom: 0;
+	}
+}
+.rule{
+	&__input{
+		margin-right: 10px;
+	}
+}
+.confirm__btn{
+	font-size: 15px;
+	font-weight: $medium;
+	color: #fff;
+	display: block;
+	background-color: $Lime;
+	height: 41px;
+	line-height: 41px;
+	max-width: 257px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	margin: 0 auto;
+	transition: all .3s;
+	&:hover{
+		background-color: darken($Lime, 10%);
+		text-decoration: none;
+		color: #fff;
+	}
+}
+.field-label{
+	font-size: 15px;
+	font-weight: $bold;
+	margin-bottom: 9px;
+	display: inline-block;
+	&.required{
+		position: relative;
+		&:after{
+			content: '*';
+			color: red;
+			position: absolute;
+			top: 0;
+			right: -10px;
+			display: block;
+			font-weight: $bold;
+		}
+	}
+}

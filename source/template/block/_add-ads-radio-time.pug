@@ -1,0 +1,22 @@
+-
+		var addAdsType = [
+			{
+				id: 'month-1',
+				word: '1 mėn.',
+				name: 'time'
+			},{
+				id: 'month-2',
+				word: '2 mėn.',
+				name: 'time'
+			},{
+				id: 'month-3',
+				word: '3 mėn.',
+				name: 'time'
+			}
+		]
+.add-ads__time.field-label Skelbimo galiojimo laikas
+ul.add-ads__list
+			each item in addAdsType
+				li.add-ads__item
+					input(type='radio' name=`${item.name}` id=`${item.id}`).ads__type
+					label(for=`${item.id}`).ads__label= item.word

@@ -1,0 +1,17 @@
+-
+		var addAdsType = [
+			{
+				id: 'search',
+				word: 'Siūlau',
+				name: 'ads'
+			},{
+				id: 'invite',
+				word: 'Ieškau',
+				name: 'ads'
+			}
+		]
+ul.add-ads__list
+			each item in addAdsType
+				li.add-ads__item
+					input(type='radio' name=`${item.name}` id=`${item.id}`).ads__type
+					label(for=`${item.id}`).ads__label= item.word
