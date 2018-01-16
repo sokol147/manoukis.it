@@ -1,0 +1,36 @@
+-
+		var uploadImage = [
+			{
+				className: 'upload__main',
+				main: 'Pagrindinė',
+				img: 'ads-add-image.png',
+				remove: 'Trinti'
+			},{
+				className: 'upload__success',
+				main: '',
+				img: 'ads-add-image.png',
+				remove: 'Trinti'
+			},{
+				className: '',
+				main: '',
+				img: 'default.png'
+			},{
+				className: '',
+				main: '',
+				img: 'default.png'
+			},{
+				className: '',
+				main: '',
+				img: 'default.png'
+			}
+		]
+.add-ads__upload
+	.field-label Nuotraukos
+	input(type='file').upload__input
+	ul.upload__list
+		each item in uploadImage
+			li.upload__item
+				img.upload__image(src=`templates/images/default/${item.img}`)
+				.upload__info
+					a(href='#' class=`${item.className}`).news__read-more= item.main
+					a(href='#').upload__remove= item.remove

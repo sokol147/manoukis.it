@@ -1,0 +1,25 @@
+- var fullText = 'Nuolat superkame ekologines bei pereinamojo statuso avižas, kviečius, kvietrugius, rugius, speltą, ir kitus '
+- var fullHeader = 'Perkame ekologiškus ir P2 statuso grūdus'
+- var fullType = 'Siūlo'
+- var fullClass = 'search'
+- var fullDate = '2018-01-05'
+- var fullTopic = 'Augalininkystė'
+- var fullLabel = 'Kontaktai'
+- var fullNumber = '+37065269920'
+- var fullBack = 'Grįžti į skelbimų sąrašą'
+.ads__info
+	.announcment__descr
+		.announcment__type(class=`type__${fullClass}`)= fullType
+		.announcment__date= fullDate
+		.announcment__topic= fullTopic
+	.ads__full
+		.full__wrapper
+			.full__header.announcment__head= fullHeader
+			img.mobile__img(src='templates/images/default/ads-add-image.png')
+			.full__text= fullText
+			.full__contacts
+				.full__label.field-label= fullLabel
+				.full__number= fullNumber
+			a(href='#').full__back.news__read-more= fullBack
+		.full__image-wrapper
+				img.full__image(src='templates/images/default/ads-add-image.png')

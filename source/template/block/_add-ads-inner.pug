@@ -1,0 +1,14 @@
+- var addAdsHeader = 'Naujas skelbimas'
+.add-ads
+	.container
+		.row
+			.col-lg-2
+				.left-banner-column
+					include ../block/_small-banner-list
+			.col-lg-7
+				include ../block/_m-banner
+				include ../block/_ads-info
+				h4.add-ads__header.ads-list__header= addAdsHeader
+				include ../block/_ads-listing
+			.col-lg-3
+				include ../block/_big-side-bar

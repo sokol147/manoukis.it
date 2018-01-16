@@ -1,0 +1,25 @@
+-
+		var contacts = [
+			{
+				labelRequired: 'required',
+				label: 'Telefonas',
+				inputType: 'text'
+			},{
+				labelRequired: '',
+				label: 'Papildomas telefonas',
+				inputType: 'text'
+			},{
+				labelRequired: '',
+				label: 'Vietovė',
+				inputType: 'text'
+			},{
+				labelRequired: '',
+				label: 'El. paštas',
+				inputType: 'text'
+			}
+		]
+ul.add-ads__contacts.category__list
+	each item in contacts
+		li.category__item
+			label.field-label(class=`${item.labelRequired}`)= item.label
+			input.field-input(type=`${item.inputType}`)
