@@ -6,6 +6,10 @@ $(document).ready(function() {
 	
 	$('.select-mobile-only').selectize();
 
+	$('.sub-menu__select').selectize();
+
+	$('.field-select').selectize();
+
 	let newsImgWidth = $('.figure-img').width();
 	$('.figure-descr').width(newsImgWidth);
 

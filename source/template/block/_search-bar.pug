@@ -3,12 +3,13 @@
 - var search = 'Paieška'
 .search-bar
 	.container
-		.row
+		.row.align-items-center
 			.col-lg-2.date-column
 				p.date=date
-			.col-lg-7
+			.col-lg-7.align-items-center
 				.short-news
-					p.short-news__inner=shortNews
+					marquee(behavior='scroll' direction='left')
+						p.short-news__inner=shortNews
 			.col-lg-3.col-12.search-column
 				.search-bar-wrapper
 					p.search__word=search

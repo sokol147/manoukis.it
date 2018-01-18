@@ -6,23 +6,24 @@
 	.date{
 		color: $textBlack;
 		font-weight: $bold;
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.short-news{
 		position: relative;
 		overflow: hidden;
 		color: $textNewsTag;
+		display: flex;
 		&__inner{
 			white-space: nowrap;
 		}
-		&:after{
+		/* &:after{
 			content: '...';
 			position: absolute;
 			background-color: $LightGreyBG;
 			padding-left: 3px;
 			right: 0;
 			top: 0;
-		}
+		} */
 	}
 }
 .search{

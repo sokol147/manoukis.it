@@ -50,3 +50,23 @@
 		}
 	}
 }
+.add-ads .m-banner{
+	display: none;
+}
+@media only screen and (max-width: 991px){
+	.add-ads__header{
+		padding-top: 15px;
+	}
+	.add-ads .m-banner{
+		display: block;
+	}
+}
+@media only screen and (max-width: 750px){
+	.add-ads__confirmation{
+		flex-wrap: wrap;
+	}
+	.add-ads__confirmation .field-input{
+		width: 100%;
+		margin-top: 10px;
+	}
+}

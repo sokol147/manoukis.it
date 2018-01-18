@@ -6,7 +6,7 @@
 			'link4':'Kita',
 			'link5':'Nekilnojamasis Turtas',
 			'link6':'Technika',
-			'link6':'Žemės ūkio produktai'
+			'link7':'Žemės ūkio produktai'
 		}
 .sub-menu
 	.container
@@ -19,3 +19,11 @@
 						each subItem, subLink in subMenu
 							li.sub-menu__item
 								a.sub-menu__link(href=`${subLink}`)= subItem
+					select.sub-menu__select
+						option Augalininkystė
+						option Paslaugos
+						option Gyvulininkystė
+						option Kita
+						option Nekilnojamasis Turtas
+						option Technika
+						option Žemės ūkio produktai

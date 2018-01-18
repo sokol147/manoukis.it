@@ -4,7 +4,8 @@ li.announcment__item
 		a.announcment__link(href=`${item.link}`)
 			.announcment__head= item.header
 		.announcment__descr
-			.announcment__type(class=`type__${item.classType}`)= item.type
+			.announcment__type-wrapper
+				.announcment__type(class=`type__${item.classType}`)= item.type
 			.announcment__date= item.date
 			.announcment__topic= item.topic
 		.announcment__text= item.text
