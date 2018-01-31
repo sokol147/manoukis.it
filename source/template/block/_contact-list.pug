@@ -1,0 +1,118 @@
+-
+	var contactList = [
+		{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		},{
+			photo: 'photo1.png',
+			name: 'Danguolė Skarbaliene',
+			position: 'Vyriausioji redaktorė',
+			fax: ' (8~37) 228 257; 206 737',
+			phone: ' 8~687 748 27',
+			email: ' redaktore@manoukis.lt'
+		}
+	]
+ul.contact__list
+	each item in contactList
+		li.contact__item
+			img(src=`templates/images/contacts/${item.photo}`).contact__photo
+			.contact__descr
+				p.contact__name= item.name
+				p.contact__position= item.position
+				.contact__fax
+					p.contact__label Faksas
+					p.contact__info= item.fax
+				.contact__phone
+					p.contact__label Mob. tel.
+					p.contact__info= item.phone
+				.contact__email
+					p.contact__label El. paštas 
+					a(href='#').news__read-more.contact__info= item.email

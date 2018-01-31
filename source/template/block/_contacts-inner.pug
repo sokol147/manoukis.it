@@ -1,0 +1,19 @@
+- var contactName = 'Žurnalą „Mano ūkis“ 1995 m. įsteigė Lietuvos žemės ūkio konsultavimo tarnyba'
+- var contactAddress = 'Redakcijos adresas: Gedimino g. 47–415 LT-44242 Kaunas Tel./faks. (8~37) 22 82 57, 20 67 37'
+- var contactEmail = ' redaktore@manoukis.lt'
+.contacts
+	.container
+		.row
+			.col-lg-2
+				include ../block/_small-side-bar
+			.col-lg-7
+				include ../block/_m-banner
+				h4.add-ads__header.ads-list__header Kontaktai
+				.contacts__text
+					p.contacts__name= contactName
+					p.contacts__address= contactAddress
+					p.contacts__email El. paštas 
+						a(href='#').news__read-more.contacts__email= contactEmail
+				include ../block/_contact-list
+			.col-lg-3
+				include ../block/_big-side-bar

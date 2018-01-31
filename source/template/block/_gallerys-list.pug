@@ -1,0 +1,50 @@
+-
+	var gallerysList = [
+		{
+			photo: 'item1.png',
+			text: '„DOJUS agro“ 25 metų jubiliejaus šventė Šiauliuose. Jolantos Bulotienės fotoreportažas',
+			link: 'link1'
+		},{
+			photo: 'item2.png',
+			text: '"Manoūkiečiai" Spaudos atgavimo dieną šventė, kepdami lietuvišką duoną ir klausydami eilėraščių. L. Mockevičienės fotoreportažas',
+			link: 'link2'
+		},{
+			photo: 'item3.png',
+			text: '"Manoūkiečiai" Spaudos atgavimo dieną šventė, kepdami lietuvišką duoną ir klausydami eilėraščių. L. Mockevičienės fotoreportažas',
+			link: 'link3'
+		},{
+			photo: 'item4.png',
+			text: '„DOJUS agro“ 25 metų jubiliejaus šventė Šiauliuose. Jolantos Bulotienės fotoreportažas',
+			link: 'link4'
+		},{
+			photo: 'item1.png',
+			text: '„DOJUS agro“ 25 metų jubiliejaus šventė Šiauliuose. Jolantos Bulotienės fotoreportažas',
+			link: 'link5'
+		},{
+			photo: 'item2.png',
+			text: '"Manoūkiečiai" Spaudos atgavimo dieną šventė, kepdami lietuvišką duoną ir klausydami eilėraščių. L. Mockevičienės fotoreportažas',
+			link: 'link6'
+		},{
+			photo: 'item3.png',
+			text: '"Manoūkiečiai" Spaudos atgavimo dieną šventė, kepdami lietuvišką duoną ir klausydami eilėraščių. L. Mockevičienės fotoreportažas',
+			link: 'link7'
+		},{
+			photo: 'item4.png',
+			text: '„DOJUS agro“ 25 metų jubiliejaus šventė Šiauliuose. Jolantos Bulotienės fotoreportažas',
+			link: 'link8'
+		},{
+			photo: 'item3.png',
+			text: '"Manoūkiečiai" Spaudos atgavimo dieną šventė, kepdami lietuvišką duoną ir klausydami eilėraščių. L. Mockevičienės fotoreportažas',
+			link: 'link9'
+		},{
+			photo: 'item4.png',
+			text: '„DOJUS agro“ 25 metų jubiliejaus šventė Šiauliuose. Jolantos Bulotienės fotoreportažas',
+			link: 'link10'
+		}
+	]
+ul.gallerys__list
+	each item in gallerysList
+		li.gallerys__item
+			a(href=`${item.link}`).gallerys__link
+				img(src=`templates/images/gallerys/${item.photo}`).gallerys__photo
+				p.gallerys__text= item.text

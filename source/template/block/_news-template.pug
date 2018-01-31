@@ -25,17 +25,7 @@
 - var newsImgSecond = 'news-img-second.png'
 - var newsImgSecondDescr = 'Ministras Bronius Markauskas pristatė naująjį Nacionalinės žemės tarnybos vadovą Laimoną Čiaką'
 - var galleryHeader = 'Galerija'
--
-		var galleryList = {
-			'#1':'news-gallery-1.png',
-			'#2':'news-gallery-2.png',
-			'#3':'news-gallery-3.png',
-			'#4':'news-gallery-4.png',
-			'#5':'news-gallery-5.png',
-			'#6':'news-gallery-6.png',
-			'#7':'news-gallery-7.png',
-			'#8':'news-gallery-8.png'
-		}
+
 - var newsPrint = 'Spausdinti'
 
 - var uploadHeader = 'Pasiūlykite savo nuotrauką arba video'
@@ -122,11 +112,7 @@
 						p BNS, ZUM, MU inf.
 					.news__gallery
 						.gallery-header= galleryHeader
-						ul.gallery__list
-							each galleryImg, galleryLink in galleryList
-								li.gallery__item
-									a.gallery__link(href=`templates/images/news-gallery/${galleryImg}` data-toggle='lightbox' data-gallery='example-gallery')
-										img.gallery__img(src=`templates/images/news-gallery/${galleryImg}`)
+						include ../block/_gallery-list
 					.news__share
 						a(href='#').news__print= newsPrint
 						.news__counter

@@ -84,6 +84,11 @@
 		}
 	}
 }
+.gallery__header{
+	font-size: 24px;
+	font-weight: $bold;
+	margin-bottom: 11px;
+}
 .form-upload{
 	border: 1px solid $borderGrey;
 	padding: 15px 18px;
@@ -294,6 +299,11 @@
 	.news__counter{
 		margin-left: 0;
 		width: 100%;
+	}
+}
+@media only screen and (max-width: 991px){
+	.gallery .right-banner-column{
+		display: none;
 	}
 }
 @media only screen and (max-width: 600px){
