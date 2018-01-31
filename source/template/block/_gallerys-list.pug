@@ -42,9 +42,10 @@
 			link: 'link10'
 		}
 	]
-ul.gallerys__list
-	each item in gallerysList
-		li.gallerys__item
-			a(href=`${item.link}`).gallerys__link
-				img(src=`templates/images/gallerys/${item.photo}`).gallerys__photo
-				p.gallerys__text= item.text
+.gallerys__list-wrapper
+	ul.gallerys__list
+		each item in gallerysList
+			li.gallerys__item
+				a(href=`${item.link}`).gallerys__link
+					img(src=`templates/images/gallerys/${item.photo}`).gallerys__photo
+					p.gallerys__text= item.text

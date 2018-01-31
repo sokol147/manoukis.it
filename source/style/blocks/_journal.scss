@@ -1,0 +1,142 @@
+.archive-filter{
+	background-color: $Brown;
+	padding: 13px 17px 8px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	&__header{
+		font-weight: $regular;
+		text-transform: uppercase;
+		font-size: 16px;
+		color: #fff;
+		margin-right: 17px;
+	}
+	&__year{
+		width: 293px;
+		margin-left: auto;
+		margin-right: 17px;
+	}
+	&__number{
+		width: 257px;
+	}
+}
+.journal-topic{
+	&__list{
+		padding: 16px 14px 20px;
+	}
+	&__item{
+		margin-bottom: 14px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__autor{
+		color: $newsDescr;
+		font-size: 14px;
+		font-weight: $regular;
+	}
+	&__link{
+		color:#000;
+		&:hover{
+			text-decoration: none;
+			color: #000;
+		}
+	}
+	&__header{
+		font-weight: $bold;
+		margin-bottom: 3px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+.journal-content{
+	&__header{
+		font-weight: $bold;
+		font-size: 24px;
+		margin-bottom: 7px;
+		text-transform: uppercase;
+	}
+	&__item{
+		border: 1px solid $borderGrey;
+		margin-bottom: 18px;
+	}
+	.journal-item__header{
+		display: inline-block;
+		padding: 10px 0 9px 16px;
+		background-color: $green;
+		color: #fff;
+		text-transform: uppercase;
+		width: 100%;
+	}
+}
+.journal-main{
+	margin-bottom: 20px;
+	border-bottom: 3px solid $borderGrey;
+	padding-bottom: 15px;
+	&__date{
+		font-size: 30px;
+		text-transform: uppercase;
+		color: $Lime;
+		padding-bottom: 5px;
+		margin-bottom: 18px;
+		border-bottom: 5px solid $green;
+	}
+	&__header{
+		font-size: 24px;
+		font-weight: $bold;
+		margin-bottom: 5px;
+	}
+	.info__list{
+		display: flex;
+		margin-bottom: 11px;
+	}
+	.autor-name{
+		font-weight: $bold;
+	}
+	.info__item{
+		padding-right: 5px;
+		margin-right: 5px;
+		border-right: 1px solid $borderGrey;
+		color: $newsDescr;
+		font-size: 14px;
+		&:last-child{
+			margin-right: 0;
+			border-right: none;
+		}
+	}
+}
+@media only screen and (max-width: 991px){
+	.journal .left-banner-column{
+		display: none;
+	}
+	.journal .right-banner-column{
+		display: none;
+	}
+}
+@media only screen and (max-width: 680px){
+	.journal .archive-filter{
+		flex-wrap: wrap;
+	}
+	.journal .archive-filter__header{
+		margin-bottom: 7px;
+	}
+	.journal .archive-filter__year{
+		width: 100%;
+		margin-right: 0;
+	}
+	.journal .archive-filter__number{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 480px){
+	.journal .archive-filter{
+		margin-left: -15px;
+		margin-right: -15px;
+		order: -1;
+	}
+	.journal .new-order{
+		display: flex;
+		flex-direction: column;
+	}
+}

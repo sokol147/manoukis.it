@@ -3,7 +3,16 @@ $(document).ready(function() {
 		e.preventDefault()
 		$('.nav-wrapper').toggleClass('open');
 	})
-	
+
+	$('.contact__name').each(function(){
+		var ths = $(this);
+		ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
+	});
+
+	$('.archive-filter__year').selectize();
+
+	$('.archive-filter__number').selectize();
+
 	$('.select-mobile-only').selectize();
 
 	$('.sub-menu__select').selectize();
