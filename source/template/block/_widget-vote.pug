@@ -1,0 +1,30 @@
+- var appearanceHeader = 'Apklausa'
+- var appearanceQuestion = 'Ar balsuosite už Arūną Karbauskį prezidento rinkimuose?'
+-
+	var appearanceAnswer = [
+		{
+			label: 'Taip, balsuosiu',
+			result: '52'
+		},{
+			label: 'Nebalsuosiu',
+			result: '25'
+		},{
+			label: 'Nežinau',
+			result: '25'
+		}
+	]
+- var appearenceBtnText = 'Atsakyti'
+- var totalVotes = '25'
+.appearance.widget
+	.appearance__header.widget__header=appearanceHeader
+	form.appearance__question-wrapper
+		.appearance__question=appearanceQuestion
+		ul.appearance__answer.answer
+			each item in appearanceAnswer
+				li.answer__item
+					.answer__result= item.result
+					label.answer__label.label--radio=item.label
+						input.answer__input.radio(type='radio' name='question')
+		a.btn-appearance=appearenceBtnText
+		.total__votes Viso balsavo: 
+			span= totalVotes

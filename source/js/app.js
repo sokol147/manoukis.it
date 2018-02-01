@@ -1,8 +1,18 @@
 $(document).ready(function() {
 	$('.btn-menu').on('click',function(e){
-		e.preventDefault()
+		e.preventDefault();
 		$('.nav-wrapper').toggleClass('open');
 	})
+
+	// vote widget
+	$('.btn-appearance').on('click', function(e){
+		e.preventDefault();
+		$('.appearance__question-wrapper').addClass('voted');
+		$('.btn-appearance').fadeOut(100);
+		$('.answer__input').fadeOut(100);
+		$('.total__votes').fadeIn(100);
+		$('.answer__result').fadeIn(100);
+	});
 
 	$('.contact__name').each(function(){
 		var ths = $(this);

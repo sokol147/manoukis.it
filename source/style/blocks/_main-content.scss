@@ -90,7 +90,20 @@
 		}
 	}
 }
+.appearance__question-wrapper.voted{
+	.answer__label{
+		padding-left: 14px;
+	}
+}
 .appearance{
+	.total__votes{
+		color: $newsDescr;
+		padding: 7px 0;
+		display: none;
+		span{
+			color: #000;
+		}
+	}
 	&__question-wrapper{
 		padding: 19px 14px 23px 20px;
 	}
@@ -101,8 +114,18 @@
 	.answer{
 		margin-bottom: 15px;
 		font-size: 15px;
+		&__result{
+			font-weight: $bold;
+			color: $green;
+			display: none;
+			&:after{
+				content: '%';
+				margin-left: 1px;
+			}
+		}
 		&__item{
 			position: relative;
+			display: flex;
 		}
 		&__label{
 			color: $appearenceAnswer;
@@ -114,7 +137,7 @@
 		.radio{
 			position: absolute;
 			left: 0;
-			top: 5px;
+			top: 3px;
 			outline: none;
 			/* &:before{
 				transition: all .3s;
@@ -220,6 +243,7 @@
 		}
 		&__item{
 			display: flex;
+			align-items: flex-start;
 			width: 50%;
 		}
 		&__img{

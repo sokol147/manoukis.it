@@ -7,10 +7,6 @@
 			'#rbanner-1':'rbanner-1.png',
 			'#rbanner-2':'rbanner-2.png',
 		}
-- var appearanceHeader = 'Apklausa'
-- var appearanceQuestion = 'Ar balsuosite už Arūną Karbauskį prezidento rinkimuose?'
-- var appearanceAnswer = ['Taip, balsuosiu','Nebalsuosiu','Nežinau']
-- var appearenceBtnText = 'Atsakyti'
 - var weatherHeader = 'Orai'
 - var businessInfoHeader = 'Verslo informacija'
 -
@@ -41,16 +37,7 @@
 				li.right-banner__item
 					a.right-banner__link(href=`${rBannerLink}`)
 						img.right-banner__img(src=`templates/images/rBanners/${rBannerImg}`)
-	.appearance.widget
-		.appearance__header.widget__header=appearanceHeader
-		form.appearance__question-wrapper
-			.appearance__question=appearanceQuestion
-			ul.appearance__answer.answer
-				each item in appearanceAnswer
-					li.answer__item
-						label.answer__label.label--radio=item
-							input.answer__input.radio(type='radio' name='question')
-			a.btn-appearance=appearenceBtnText
+	include ../block/_widget-vote
 	.weather.widget
 		.widget__header=weatherHeader
 	.business-info.widget
