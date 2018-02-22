@@ -1,0 +1,20 @@
+-
+	var catalogControls = [
+		{
+			classActive: 'active',
+			name: 'Žurnalų prenumerata'
+		},{
+			classActive: '',
+			name: 'El. knygynas'
+		}
+	]
+.catalog-tabs
+	ul.catalog-control__list
+		each item in catalogControls
+			li.catalog-control__item(class=`${item.classActive}`)
+				a.catalog-control__link(href='#')= item.name
+	ul.catalog-content__list
+		li.catalog-content__item.active
+			include ../block/_catalog-magazins
+		li.catalog-content__item
+			include ../block/_catalog-books

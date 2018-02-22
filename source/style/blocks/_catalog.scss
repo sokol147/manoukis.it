@@ -1,0 +1,254 @@
+.catalog{
+	padding-top: 24px;
+	&-control{
+		&__list{
+			display: flex;
+			border-bottom: 5px solid $Brown;
+			margin-bottom: 10px;
+		}
+		&__item{
+			width: 213px;
+			text-align: center;
+			background-color: $LightGreyBG;
+			border: 1px solid $borderGrey;
+			margin-right: 4px;
+			transition: all .3s;
+			&:last-child{
+				margin-right: 0;
+			}
+			&.active,
+			&:hover{
+				background-color: $Brown;
+				border: 1px solid $Brown;
+				a{
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+		&__link{
+			padding: 10px 0;
+			display: block;
+			color: #000;
+			text-decoration: none;
+			font-weight: $regular;
+		}
+	}
+	&-content{
+		&__header{
+			font-size: 20px;
+			font-weight: $medium;
+			color: $Brown;
+			text-transform: uppercase;
+		}
+		&__item{
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+	}
+}
+.btn-to-basket{
+	display: inline-block;
+	width: 100%;
+	max-width: 150px;
+	font-size: 15px;
+	text-align: center;
+	background-color: $green;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	transition: all .3s;
+	&:before{
+		content: url(../images/icons/icon-cart-white.svg);
+		margin-right: 4px;
+		width: 16px;
+		height: 13px;
+		vertical-align: middle;
+	}
+	&:hover{
+		text-decoration: none;
+		background-color: darken($green, 10%);
+		color: #fff;
+	}
+}
+.quantity{
+	&__label{
+		font-size: 15px;
+		font-weight: $regular;
+		margin-bottom: 5px;
+	}
+}
+.magazine__quantity .selectize-input.items.full.has-options.has-items{
+	background-color: #fff;
+}
+.magazine__quantity .selectize-control.quantity__dropdown.single{
+	height: 39px;
+}
+.book__quantity .selectize-control.quantity__dropdown.single{
+	width: 160px;
+	margin-right: 6px;
+	height: 37px;
+}
+.book__quantity .selectize-input.items.full.has-options.has-items{
+	background-color: #fff;
+}
+.book__quantity{
+	.quantity__label{
+		margin-bottom: 0;
+		margin-right: 8px;
+	}
+}
+.book{
+	&__list{
+		border: 1px solid $borderGrey;
+		margin-bottom: 20px;
+	}
+	&__image{
+		max-width: 150px;
+		margin-right: 17px;
+	}
+	&__title{
+		font-size: 24px;
+		font-weight: $bold;
+		margin-bottom: 6px;
+	}
+	&__new{
+		border: 1px solid $Lime;
+		display: inline-block;
+		border-radius: 5px;
+		color: $Lime;
+		margin-bottom: 6px;
+		font-size: 13px;
+		font-weight: $bold;
+		padding: 2px 5px;
+	}
+	&__total{
+		display: flex;
+		align-items: center;
+	}
+	&__price{
+		margin-right: 14px;
+		&-label{
+			font-size: 14px;
+			font-weight: $regular;
+		}
+		&-price{
+			font-size: 34px;
+			font-weight: $medium;
+			color: $green;
+		}
+	}
+	&__quantity{
+		padding: 19px 23px 19px 16px;
+		display: flex;
+		background-color: $LightGreyBG;
+		align-items: center;
+	}
+	&__about{
+		font-size: 16px;
+		font-weight: $regular;
+		line-height: 1.6;
+		margin-bottom: 14px;
+	}
+	&__item{
+		border-bottom: 1px solid $borderGrey;
+		padding: 14px;
+		display: flex;
+		align-items: flex-start;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+}
+.magazine{
+	&__subscribers{
+		width: 100%;
+		margin-right: 14px;
+	}
+	&__date{
+		width: 100%;
+		margin-right: 14px;
+	}
+	&__duration{
+		width: 100%;
+		margin-right: 14px;
+	}
+	&__quantity{
+		background-color: $LightGreyBG;
+		margin-bottom: 14px;
+		margin-top: 14px;
+		padding: 8px 19px 18px 13px;
+		border: 1px solid $borderGrey;
+		display: flex;
+		align-items: flex-end;
+	}
+	&__list{
+		border: 1px solid $borderGrey;
+	}
+	&__item{
+		border-bottom: 1px solid $borderGrey;
+		padding: 14px;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	&__info{
+		display: flex;
+		align-items: flex-start;
+	}
+	&__title{
+		font-size: 24px;
+		font-weight: $bold;
+		margin-bottom: 6px;
+	}
+	&__about{
+		font-size: 16px;
+		font-weight: $regular;
+		line-height: 1.6;
+		margin-bottom: 4px;
+	}
+	&__periodicity{
+		margin-bottom: 18px;
+		&-label{
+			font-weight: $bold;
+			display: inline-block;
+		}
+		&-date{
+			display: inline-block;
+		}
+	}
+	&__total{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__number{
+		&-label{
+			font-size: 14px;
+			font-weight: $regular;
+		}
+		&-counter{
+			font-size: 15px;
+			color: $newsDescr;
+		}
+	}
+	&__price{
+		color: $green;
+		font-size: 34px;
+		font-weight: $medium;
+	}
+	&__image{
+		max-width: 150px;
+		margin-right: 17px;
+	}
+	&__warning{
+		background-color: $peach;
+		padding: 16px 18px;
+		font-size: 14px;
+		&-header{
+			font-weight: $bold;
+		}
+	}
+}

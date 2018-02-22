@@ -3,6 +3,22 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('.nav-wrapper').toggleClass('open');
 	})
+	// catalog tabs
+	$('.catalog-control__link').on('click',function(e){
+		e.preventDefault();
+
+		var item = $(this).closest('.catalog-control__item'),
+				contentItem = $('.catalog-content__item'),
+				itemPosition = item.index();
+
+		contentItem.eq(itemPosition)
+			.add(item)
+			.addClass('active')
+			.siblings()
+			.removeClass('active');
+	})
+	// quantity dropdowns
+	$('.quantity__dropdown').selectize();
 
 	// vote widget
 	$('.btn-appearance').on('click', function(e){

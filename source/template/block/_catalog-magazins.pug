@@ -1,0 +1,49 @@
+-
+	var magazinList = [
+		{
+			photo: 'magazine1.png',
+			title: 'Mano ūkis',
+			about: 'Pažymėkite varnelę ir pildykite žemiau užsakymo duomenis.   Žurnalas žemdirbiams, sodininkams, daržininkams, agroverslininkams.',
+			periodicityLabel: 'Periodiškumas:',
+			periodicity: '12 numerių per metus.',
+			pereodicityInfo: '',
+			numbers: '2018 m. Nr.2 - Nr.12',
+			price: '35.75 Eur',
+			warningHeader: '',
+			warningText: ''
+		},{
+			photo: 'magazine2.png',
+			title: 'VETinfo',
+			about: 'Pažymėkite varnelę ir pildykite žemiau užsakymo duomenis.   Žurnalas veterinarijos gydytojams, gyvulininkystės specialistams ir ūkininkams. ',
+			periodicityLabel: '2018 m. periodiškumas:',
+			periodicity: '4 numeriai per metus. ',
+			pereodicityInfo: 'Išleidžiamas vasario, gegužės, rugpjūčio, lapkričio mėnesiais',
+			numbers: '2018 m. 12 mėn. /  4 numeriai',
+			price: '12.00 Eur',
+			warningHeader: 'Žurnalo „VETinfo“ prenumerata SMS žinute. ',
+			warningText: 'Norėdami tapti žurnalo „VETinfo“ prenumeratoriumi siųskite SMS žinutę numeriu 1679 su raktažodžiu  VET Vardas Pavardė Pristatymo adresas. Užsakymo žinutės kaina 3 Eur Išsiuntę žinutę, Jūs tampate nuolatiniu žurnalo „VETinfo“ prenumeratoriumi ir sumokate už vieną numerį. Toliau prenumeratos mokestis nuskaičiuojamas tais mėnesiais, kada išeina žurnalas. „VETinfo“ prenumeratos kaina:  3 Eur už 1 numerį Žurnalo „VETinfo“ prenumeratos nutraukimas: Jūs bet kada galite atsisakyti žurnalo prenumeratos išsiųsdami SMS žinutę numeriu 1679 su raktažodžiu UNVET. Prenumeratos nutraukimo kaina:  0,09 Eur  Visas savo paslaugas galite valdyti http://savitarna.vero.lt/  Daugiau informacijos tel. 8 37 20 67 37 arba el. paštu prenumerata@manoukis.lt'
+		}
+	]
+h4.catalog-content__header Žurnalų prenumerata
+ul.magazine__list
+	each item in magazinList
+		li.magazine__item
+			.magazine__info
+				img(src=`templates/images/magazins/${item.photo}`).magazine__image
+				.magazine__descr
+					.magazine__title= item.title
+					.magazine__about= item.about
+					.magazine__periodicity
+						.magazine__periodicity-label= item.periodicityLabel
+						.magazine__periodicity-date= item.periodicity
+						.magazine__pereodicity-info= item.pereodicityInfo
+					.magazine__total
+						.magazine__number
+							.magazine__number-label Prenumeratos kaina:
+							.magazine__number-counter= item.numbers
+						.magazine__price= item.price
+			include ../block/_catalog-magazine-quantity
+			.magazine__warning
+				.magazine__warning-header= item.warningHeader
+				p.magazine__warning-text= item.warningText
+

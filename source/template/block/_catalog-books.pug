@@ -1,0 +1,50 @@
+-
+	var bookList = [
+		{
+			photo: 'book1.png',
+			title: 'Žurnalas MANO ŪKIS 2/2018',
+			new: 'Naujas',
+			about: 'Ekologinis ūkis: cheminių medžiagų prevencija. Geriausios ekologinės sėjomainos rotacijos paieškos.',
+			price: '3.90 Eur'
+		},{
+			photo: 'book2.png',
+			title: 'Žurnalas „VETinfo“ 04/2017',
+			new: 'Naujas',
+			about: 'AKTUALIJOS. Privatūs veterinarijos gydytojai pasisakė už savivaldą MOKSLAS. Kampilobakteriozė - dažniausia zoonozė Lietuvoje PRAKTIKA. Nauja infekcinė kačių liga Lietuvoje Šunų sėklidžių navikų citologiniai ypatumai Arklių tarpkaulinio raiščio pažeidimai FERMA. Penimų galvijų uodegos galo nekrozė Kū karštligė Ektoparazitai kelia grėsmę paukštynams SAUGA. Augaliniai antioksidantai mėsos gaminiuose SKAITINIAI. Sėkmės džentelmenai pasigenda tik stabilumo',
+			price: '3.90 Eur'
+		},{
+			photo: 'book3.png',
+			title: 'Žurnalas MANO ŪKIS 2/2018',
+			new: 'Naujas',
+			about: 'Ekologinis ūkis: cheminių medžiagų prevencija. Geriausios ekologinės sėjomainos rotacijos paieškos.',
+			price: '3.90 Eur'
+		},{
+			photo: 'book4.png',
+			title: 'Žurnalas „VETinfo“ 04/2017',
+			new: 'Naujas',
+			about: 'AKTUALIJOS. Privatūs veterinarijos gydytojai pasisakė už savivaldą MOKSLAS. Kampilobakteriozė - dažniausia zoonozė Lietuvoje PRAKTIKA. Nauja infekcinė kačių liga Lietuvoje Šunų sėklidžių navikų citologiniai ypatumai Arklių tarpkaulinio raiščio pažeidimai FERMA. Penimų galvijų uodegos galo nekrozė Kū karštligė Ektoparazitai kelia grėsmę paukštynams SAUGA. Augaliniai antioksidantai mėsos gaminiuose SKAITINIAI. Sėkmės džentelmenai pasigenda tik stabilumo',
+			price: '3.90 Eur'
+		}
+	]
+h4.catalog-content__header El. knygynas
+ul.book__list
+	each item in bookList
+		li.book__item
+			img(src=`templates/images/books/${item.photo}`).book__image
+			.book__descr
+				.book__title= item.title
+				.book__new= item.new
+				.book__about= item.about
+				.book__total
+					.book__price
+						.book__price-label Kaina:
+						.book__price-price= item.price
+					.book__quantity
+						.quantity__label Kiekis
+						select.quantity__dropdown
+							option 1
+							option 2
+							option 3
+							option 4
+							option 5
+						a(href='#').btn-to-basket Į krepšelį
