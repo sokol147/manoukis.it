@@ -34,12 +34,22 @@ ul.book__list
 			.book__descr
 				.book__title= item.title
 				.book__new= item.new
-				.book__about= item.about
-				.book__total
+				.book__total-wrapper
+					.book__about= item.about
 					.book__price
 						.book__price-label Kaina:
 						.book__price-price= item.price
 					.book__quantity
+						.quantity__label Kiekis
+						select.quantity__dropdown
+							option 1
+							option 2
+							option 3
+							option 4
+							option 5
+						a(href='#').btn-to-basket Į krepšelį
+			.book__about-mobile= item.about
+			.book__quantity-mobile
 						.quantity__label Kiekis
 						select.quantity__dropdown
 							option 1

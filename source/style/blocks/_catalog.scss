@@ -1,5 +1,6 @@
 .catalog{
 	padding-top: 24px;
+	margin-bottom: 24px;
 	&-control{
 		&__list{
 			display: flex;
@@ -125,8 +126,10 @@
 		padding: 2px 5px;
 	}
 	&__total{
-		display: flex;
-		align-items: center;
+		&-wrapper{
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 	&__price{
 		margin-right: 14px;
@@ -242,6 +245,9 @@
 	&__image{
 		max-width: 150px;
 		margin-right: 17px;
+		&-mobile{
+			display: none;
+		}
 	}
 	&__warning{
 		background-color: $peach;
@@ -250,5 +256,186 @@
 		&-header{
 			font-weight: $bold;
 		}
+	}
+}
+.basket{
+	border: 3px solid $borderGrey;
+	background-color: $LightGreyBG;
+	padding: 15px 19px 20px;
+	&__header{
+		font-size: 18px;
+		font-weight: $bold;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		&:before{
+			content: url(../images/icons/icon-cart-green.svg);
+			margin-right: 7px;
+			height: 20px;
+			width: 20px;
+			vertical-align: middle;
+		}
+	}
+	&__list{
+		margin-bottom: 6px;
+	}
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $borderGrey;
+		padding: 7px 0;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	&__title{
+		font-size: 16px;
+		font-weight: $regular;
+	}
+	&__counter{
+		font-weight: $bold;
+	}
+	&__btn{
+		background-color: $Lime;
+		display: block;
+		text-align: center;
+		color: #fff;
+		height: 36px;
+		line-height: 36px;
+		transition: all .3s;
+		&:hover{
+			color: #fff;
+			text-decoration: none;
+			background-color: darken($Lime, 10%);
+		}
+	}
+}
+@media only screen and (max-width: 1200px){
+	.magazine__quantity{
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+	}
+	.magazine__subscribers{
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.magazine__date{
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.magazine__duration{
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+}
+.magazine__about-wrapper-mobile{
+	display: none;
+}
+.book__quantity-mobile{
+	display: none;
+}
+.book__about-mobile{
+	display: none;
+}
+.basket-mobile-wrapper{
+	display: none;
+}
+.basket-mobile{
+	display: flex;
+	justify-content: space-between;
+	&__btn{
+		color: #fff;
+		background-color: $Lime;
+		width: 114px;
+		height: 36px;
+		line-height: 36px;
+		text-align: center;
+		font-size: 15px;
+		font-weight: $medium;
+		&:hover{
+			color: #fff;
+			background-color: darken($Lime, 10%);
+			text-decoration: none;
+		}
+	}
+	&-inner{
+		display: flex;
+		align-items: center;
+		font-size: 18px;
+		font-weight: $bold;
+		&:before{
+			content: url(../images/icons/icon-cart-green.svg);
+			width: 19px;
+			height: 19px;
+			margin-right: 7px;
+			vertical-align: middle;
+		}
+	}
+	&-counter{
+		margin-left: 5px;
+	}
+}
+@media only screen and (max-width: 991px){
+	.basket{
+		display: none;
+	}
+	.basket-mobile-wrapper{
+		display: block;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background-color: white;
+		z-index: 10;
+		border-top: 5px solid $borderGrey;
+		padding: 13px 20px;
+	}
+}
+@media only screen and (max-width: 640px){
+	.btn-to-basket{
+		max-width: 100%;
+	}
+	.magazine__image{
+		max-width: 81px;
+	}
+	.magazine__about-wrapper{
+		display: none;
+	}
+	.magazine__total{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.magazine__about-wrapper-mobile{
+		display: block;
+	}
+	.magazine__info{
+		flex-wrap: wrap;
+	}
+	.book__image{
+		max-width: 81px;
+	}
+	.book__quantity{
+		display: none;
+	}
+	.book__quantity-mobile{
+		display: block;
+		width: 100%;
+	}
+	.book__descr{
+		width: 60%;
+	}
+	.book__about{
+		display: none;
+	}
+	.book__about-mobile{
+		display: block;
+	}
+	.book__item{
+		flex-wrap: wrap;
+	}
+	.catalog-control__link{
+		font-size: 14px;
 	}
 }

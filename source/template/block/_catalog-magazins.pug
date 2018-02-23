@@ -9,8 +9,8 @@
 			pereodicityInfo: '',
 			numbers: '2018 m. Nr.2 - Nr.12',
 			price: '35.75 Eur',
-			warningHeader: '',
-			warningText: ''
+			warningHeader: 'Žurnalo „VETinfo“ prenumerata SMS žinute. ',
+			warningText: 'Norėdami tapti žurnalo „VETinfo“ prenumeratoriumi siųskite SMS žinutę numeriu 1679 su raktažodžiu  VET Vardas Pavardė Pristatymo'
 		},{
 			photo: 'magazine2.png',
 			title: 'VETinfo',
@@ -32,16 +32,23 @@ ul.magazine__list
 				img(src=`templates/images/magazins/${item.photo}`).magazine__image
 				.magazine__descr
 					.magazine__title= item.title
-					.magazine__about= item.about
-					.magazine__periodicity
-						.magazine__periodicity-label= item.periodicityLabel
-						.magazine__periodicity-date= item.periodicity
-						.magazine__pereodicity-info= item.pereodicityInfo
+					.magazine__about-wrapper
+						.magazine__about= item.about
+						.magazine__periodicity
+							.magazine__periodicity-label= item.periodicityLabel
+							.magazine__periodicity-date= item.periodicity
+							.magazine__pereodicity-info= item.pereodicityInfo
 					.magazine__total
 						.magazine__number
 							.magazine__number-label Prenumeratos kaina:
 							.magazine__number-counter= item.numbers
 						.magazine__price= item.price
+				.magazine__about-wrapper-mobile
+						.magazine__about= item.about
+						.magazine__periodicity
+							.magazine__periodicity-label= item.periodicityLabel
+							.magazine__periodicity-date= item.periodicity
+							.magazine__pereodicity-info= item.pereodicityInfo
 			include ../block/_catalog-magazine-quantity
 			.magazine__warning
 				.magazine__warning-header= item.warningHeader

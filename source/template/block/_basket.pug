@@ -1,0 +1,18 @@
+-
+	var basketList = [
+		{
+			title: 'Mano ūkis',
+			counter: '1'
+		},{
+			title: 'VETinfo',
+			counter: '2'
+		}
+	]
+.basket
+	.basket__header Mano krepšelis
+	ul.basket__list
+		each item in basketList
+			li.basket__item
+				.basket__title= item.title
+				.basket__counter= item.counter
+	a(href='#').basket__btn Užsakyti
