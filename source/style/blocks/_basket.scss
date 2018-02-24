@@ -1,0 +1,127 @@
+.order{
+	padding-top: 24px;
+	margin-bottom: 24px;
+}
+.section__header{
+	font-size: 21px;
+	font-weight: $bold;
+	color: $Brown;
+	border-bottom: 5px solid $Brown;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	padding-bottom: 4px;
+}
+.order-table{
+	margin-bottom: 25px;
+	&--book{
+		margin-bottom: 24px;
+		.selectize-input.items.full.has-options.has-items{
+			background-color: #fff;
+		}
+	}
+	&__header{
+		background-color: $green;
+		color: #fff;
+		padding: 8px 15px;
+		font-size: 18px;
+		font-weight: $medium;
+	}
+	&__list{
+		border: 1px solid $borderGrey;
+	}
+}
+.order-item{
+	display: flex;
+	border-bottom: 1px solid $borderGrey;
+	&:last-child{
+		border-bottom: none;
+	}
+	.selectize-input.items.full.has-options.has-items{
+		background-color: #fff;
+	}
+	&__sum{
+		width: 19%;
+		padding: 9px 15px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		font-weight: $bold;
+	}
+	&__counter{
+		width: 19%;
+		border-right: 1px solid $borderGrey;
+		padding: 9px 15px;
+	}
+	&__month{
+		width: 24%;
+		border-right: 1px solid $borderGrey;
+		padding: 9px 15px;
+	}
+	&__date{
+		width: 19%;
+		border-right: 1px solid $borderGrey;
+		padding: 9px 15px;
+	}
+	&__image{
+		border-right: 1px solid $borderGrey;
+		width: 19%;
+		display: flex;
+		align-items: stretch;
+		padding-left: 1px;
+		img{
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+.order-dropdown-label{
+	font-size: 14px;
+	font-weight: $regular;
+	margin-bottom: 7px;
+}
+.order-table--book{
+	&__item{
+		display: flex;
+		border-bottom: 1px solid $borderGrey;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	&__title{
+		display: flex;
+		align-items: center;
+		padding-left: 39px;
+		font-size: 14px;
+		font-weight: $bold;
+		width: 62%;
+		border-right: 1px solid $borderGrey;
+	}
+	&__counter{
+		padding: 9px 15px;
+		width: 19%;
+		border-right: 1px solid $borderGrey;
+	}
+}
+.order-total{
+	margin-left: auto;
+	border: 3px solid $borderGrey;
+	padding: 19px 24px 14px;
+	display: flex;
+	align-items: center;
+	background-color: $LightGreyBG;
+	justify-content: space-between;
+	width: 270px;
+	&__wrapper{
+		display: flex;
+	}
+	&__label{
+		font-size: 16px;
+		font-weight: $regular;
+	}
+	&__sum{
+		font-size: 18px;
+		font-weight: $bold;
+	}
+}

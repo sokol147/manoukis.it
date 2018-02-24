@@ -1,0 +1,78 @@
+-
+	var orderList = [
+		{
+			photo: 'order1.png',
+			labelDate: 'Prenumeratos pradžia:',
+			labelMonth: 'Prenumeratos trukmė (mėn.):',
+			labelCounter: 'Prenumeratos kiekis:',
+			sum: '178.5 Eur'
+		},{
+			photo: 'order2.png',
+			labelDate: 'Prenumeratos pradžia:',
+			labelMonth: 'Prenumeratos trukmė (mėn.):',
+			labelCounter: 'Prenumeratos kiekis:',
+			sum: '178.5 Eur'
+		}
+	]
+-
+	var orderListBook = [
+		{
+			title: 'Galvijų stemplės ir prieskrandžių ligos',
+			labelCounter: 'Kiekis:',
+			sum: '178.5 Eur'
+		},{
+			title: 'Užkrečiamųjų spongiforminių encefalopatijų rizikos analizė',
+			labelCounter: 'Kiekis:',
+			sum: '178.5 Eur'
+		}
+	]
+.order__header.section__header MANO KREPŠELIS
+.order-table
+	.order-table__header 2018
+	ul.order-table__list
+		each item in orderList
+			li.order-table__item.order-item
+				.order-item__image
+					img(src=`templates/images/magazins/${item.photo}`)
+				.order-item__date
+					.order-dropdown-label= item.labelDate
+					select.order-dropdown-select
+						option 2018-02-02
+						option 2018-02-01
+						option 2018-02-03
+						option 2018-02-04
+				.order-item__month
+					.order-dropdown-label= item.labelMonth
+					select.order-dropdown-select
+						option 1
+						option 2
+						option 3
+						option 4
+						option 5
+				.order-item__counter
+					.order-dropdown-label= item.labelCounter
+					select.order-dropdown-select
+						option 1
+						option 2
+						option 3
+						option 4
+						option 5
+				.order-item__sum= item.sum
+.order-table--book
+	ul.order-table__list
+		each item in orderListBook
+			li.order-table--book__item
+				.order-table--book__title= item.title
+				.order-table--book__counter
+					.order-dropdown-label= item.labelCounter
+					select.order-dropdown-select
+						option 1
+						option 2
+						option 3
+						option 4
+						option 5
+				.order-item__sum= item.sum
+.order-total__wrapper
+	.order-total
+		.order-total__label Viso
+		.order-total__sum 178.5 Eur

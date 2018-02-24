@@ -20,26 +20,28 @@ $(document).ready(function() {
 	// quantity dropdowns
 	$('.quantity__dropdown').selectize();
 
+	// order-dropdown
+	$('.order-dropdown-select').selectize();
 	// sliding cart
-	$(window).resize(function(){
-		if($(window).width() >= '991'){
-			$(function(){
-				var offset = $('.basket').offset()
-						topPadding = 15;
-				$(window).scroll(function(){
-					if($(window).scrollTop() > offset.top){
-						$('.basket').stop().animate({
-							marginTop: $(window).scrollTop() - offset.top + topPadding
-						})
-					} else {
-						$('.basket').stop().animate({
-							marginTop: 0
-						});
-					}
-				})
+
+/*	if($(window).width() >= '991'){
+		$(function(){
+			var offset = $('.basket').offset()
+					topPadding = 15;
+			$(window).scroll(function(){
+				if($(window).scrollTop() > offset.top){
+					$('.basket').stop().animate({
+						marginTop: $(window).scrollTop() - offset.top + topPadding
+					})
+				} else {
+					$('.basket').stop().animate({
+						marginTop: 0
+					});
+				}
 			})
-		}
-	})
+		})
+	}*/
+
 	// vote widget
 	$('.btn-appearance').on('click', function(e){
 		e.preventDefault();
