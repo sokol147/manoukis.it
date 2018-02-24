@@ -26,6 +26,52 @@
 			sum: '178.5 Eur'
 		}
 	]
+-
+	var inputList = [
+		{
+			width: 'small',
+			required: 'required',
+			error: 'error',
+			label: 'Užsakovo vardas',
+			id: 'field1'
+		},{
+			width: 'small',
+			required: 'required',
+			error: '',
+			label: 'Užsakovo pavardė',
+			id: 'field2'
+		},{
+			width: 'big',
+			required: 'required',
+			error: '',
+			label: 'Įmonės / ūkio pavadinimas',
+			id: 'field3'
+		},{
+			width: 'small',
+			required: 'required',
+			error: '',
+			label: 'Įmonės kodas',
+			id: 'field4'
+		},{
+			width: 'small',
+			required: 'required',
+			error: '',
+			label: 'PVM mokėtojo kodas',
+			id: 'field5'
+		},{
+			width: 'small',
+			required: 'required',
+			error: '',
+			label: 'El. paštas',
+			id: 'field6'
+		},{
+			width: 'small',
+			required: 'required',
+			error: '',
+			label: 'Telefonas',
+			id: 'field7'
+		}
+	]
 .order__header.section__header MANO KREPŠELIS
 .order-table
 	.order-table__header 2018
@@ -76,3 +122,26 @@
 	.order-total
 		.order-total__label Viso
 		.order-total__sum 178.5 Eur
+.message-warning Patikrinkite, atrodo yra klaidų
+.order-form
+	.order-form__wrapper
+		.order-form__field
+			.order-checkbox
+				input(type='checkbox' id='order1').order-checkbox__input
+				label(for='order1').order-checkbox__label Reikalinga sąskaita faktūra
+		ul.order-form__inputs.order-form__list
+			each item in inputList
+				li.order-form__item(class=`${item.width}`)
+					label(for=`${item.id}`).order-form__label(class=`${item.required}`)= item.label
+					input(id=`${item.id}`).field-input.order-form__input(class=`${item.error}`)
+		.order-form__field
+			.order-checkbox
+				input(type='checkbox' id='order2').order-checkbox__input
+				label(for='order2').order-checkbox__label Skiriasi prenumeratos pristatymo adresas
+	.order-form__confirm
+		ul.confirm-info__list
+			li.confirm-info__item
+				a(href='#').confirm-info__link.news__read-more Prenumeratos taisyklės
+			li.confirm-info__item
+				a(href='#').confirm-info__link.news__read-more Pagalba
+		a(href='#').order-confirm__btn PATVIRTINTI UŽSAKYMĄ
