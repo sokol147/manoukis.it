@@ -1,0 +1,114 @@
+.order-result{
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+.order-accept{
+	&__info{
+		background-color: $lightGreen;
+		padding: 13px 19px;
+		margin-bottom: 45px;
+	}
+	&__header{
+		color: $green;
+		font-weight: $bold;
+	}
+	&__text{
+		font-weight: $medium;
+	}
+}
+.order-info{
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 50px;
+	&__header{
+		font-weight: $bold;
+		margin-bottom: 7px;
+	}
+	&__number{
+		font-weight: $bold;
+		margin-bottom: 7px;
+	}
+	&__date{
+		font-weight: $regular;
+	}
+}
+.order-contacts{
+	display: flex;
+	margin-bottom: 40px;
+	&__seller{
+		width: 70%;
+	}
+	&__buyer{
+		width: 30%;
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+	}
+}
+.bayer-label__list{
+	font-weight: $bold;
+}
+.seller-info{
+	&__list{
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	&__item{
+		&:first-child{
+			font-weight: $bold;
+		}
+	}
+}
+.seller-contact{
+	&__list{
+		font-size: 14px;
+	}
+}
+.order-table{
+	&__head{
+		background-color: $DarkGrey;
+		color: #fff;
+		font-size: 14px;
+		font-weight: $bold;
+		display: flex;
+	}
+	&__item{
+		width: 10%;
+		text-align: center;
+		padding: 9px;
+		&:first-child{
+			width: 50%;
+			text-align: left
+		}
+	}
+	&__info{
+		display: flex;
+		font-size: 14px;
+		border: 1px solid $borderGrey;
+		border-bottom: none;
+	}
+}
+.order-table__info{
+	.order-table__item{
+		border-right: 1px solid $borderGrey;
+		&:last-child{
+			border-right: none;
+		}
+	}
+}
+.order-table__total{
+	border: 1px solid $borderGrey;
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	font-weight: $bold;
+	.order-table__item{
+		border-right: 1px solid $borderGrey;
+		&:last-child{
+			border-right: none;
+		}
+		&:first-child{
+			width: 90%;
+		}
+	}
+}

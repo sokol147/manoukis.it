@@ -1,0 +1,44 @@
+- var buyerLabel = ['Mokėtojas','Adresas','Pašto kodas','El. pašto adresas ']
+- var buyerInfo = ['Tadas Dizi','Vatos 25 P','LT-456','tadas@dizi.lt']
+- var sellerInfo = ['VšĮ LŽŪKT redakcija MANO ŪKIS','Registravimo Nr. VŠ; 97-39','Įmonės kodas 135011915','PVM kodas LT100573314']
+- var sellerInfoTwo = ['Gedimino g. 47-415, LT-44242 Kaunas','Tel./faksas 37-228257','Tel./faksas 37-228257','AB DNB bankas, b/k 40100','LT984010042500033453']
+- var tableHeader = ['Prekės, paslaugos pavadinimas','Mato vnt.','Trukmė','Kiekis','Kaina, Eur.','Suma, Eur.']
+- var tableInfo = ['MANO ŪKIS  2018-02-01 - 2018-12-01','vnt.','11','1','3.25','35.75']
+- var tableTotal = ['Suma:','35.75']
+.section__header UŽSAKYMAS
+.order-accept__info
+	.order-accept__header Jūsų užsakymas priimtas
+	p.order-accept__text Mokėjimo pavedimas turi būti padarytas iki 2018-02-25, mokėjimo pavedimo grafoje „mokėjimo paskirtis“ nurodykite išankstinės sąskaitos Nr. MU201802203117. 
+		a(href='#').order-accept__link.news__read-more Spausdinti
+.order-info
+	.order-info__header IŠANKSTINIO APMOKĖJIMO SĄSKAITA 
+	.order-info__number nr. MU201802203117
+	.order-info__date 2018 vasario 20 d.
+
+.order-contacts
+	.order-contacts__seller
+		ul.seller-info__list
+			each item in sellerInfo
+				li.seller-info__item= item
+		ul.seller-contact__list
+			each item in sellerInfoTwo
+				li.seller-contact__item= item
+
+	.order-contacts__buyer
+		ul.bayer-label__list
+			each item in buyerLabel
+				li.bayer-label__item= item
+		ul.bayer-info__list
+			each item in buyerInfo
+				li.bayer-info__item= item
+
+.order-table
+	ul.order-table__head
+		each item in tableHeader
+			li.order-table__item= item
+	ul.order-table__info
+		each item in tableInfo
+			li.order-table__item= item
+	ul.order-table__total
+		each item in tableTotal
+			li.order-table__item= item
