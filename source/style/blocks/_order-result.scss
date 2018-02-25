@@ -64,7 +64,7 @@
 		font-size: 14px;
 	}
 }
-.order-table{
+.table-order{
 	&__head{
 		background-color: $DarkGrey;
 		color: #fff;
@@ -88,21 +88,21 @@
 		border-bottom: none;
 	}
 }
-.order-table__info{
-	.order-table__item{
+.table-order__info{
+	.table-order__item{
 		border-right: 1px solid $borderGrey;
 		&:last-child{
 			border-right: none;
 		}
 	}
 }
-.order-table__total{
+.table-order__total{
 	border: 1px solid $borderGrey;
 	display: flex;
 	justify-content: space-between;
 	font-size: 14px;
 	font-weight: $bold;
-	.order-table__item{
+	.teble-order__item{
 		border-right: 1px solid $borderGrey;
 		&:last-child{
 			border-right: none;
