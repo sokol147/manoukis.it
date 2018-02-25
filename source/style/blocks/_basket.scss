@@ -240,3 +240,146 @@
 		text-decoration: none;
 	}
 }
+.address-info{
+	&__btn{
+		height: 30px;
+		line-height: 30px;
+		border: 1px solid $borderGrey;
+		border-right: none;
+		color: #000;
+		background-color: #fff;
+		display: block;
+		text-transform: uppercase;
+		width: 40px;
+		text-align: center;
+		font-size: 15px;
+		font-weight: $regular;
+		&:hover{
+			color: #000;
+			text-decoration: none;
+		}
+	}
+	&__label{
+		&-wrapper{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__input{
+		&-wrapper{
+			display: flex;
+		}
+	}
+	&__list{
+		margin-bottom: 20px;
+	}
+	&__title{
+		width: 70%;
+		margin-right: 23px;
+	}
+	&__postal{
+		width: 30%;
+	}
+	&__item{
+		margin-bottom: 20px;
+		display: flex;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+@media only screen and (max-width: 850px){
+	.order-item{
+		flex-wrap: wrap;
+	}
+	.order-item__image{
+		width: 33.33%;
+		border-bottom: 1px solid $borderGrey;
+	}
+	.order-item__date{
+		width: 33.33%;
+		border-bottom: 1px solid $borderGrey;
+	}
+	.order-item__month{
+		width: 33.33%;
+		border-bottom: 1px solid $borderGrey;
+		border-right: none;
+	}
+	.order-item__counter{
+		width: 50%;
+	}
+	.order-item__sum{
+		width: 50%;
+	}
+	.order-table--book__item{
+		flex-wrap: wrap;
+	}
+	.order-table--book__title{
+		width: 50%;
+		border-bottom: 1px solid $borderGrey;
+	}
+	.order-table--book__counter{
+		width: 50%;
+		border-bottom: 1px solid $borderGrey;
+		border-right: none;
+	}
+	.order-table--book__item .order-item__sum{
+		width: 100%;
+		padding: 20px 15px;
+	}
+}
+@media only screen and (max-width: 640px){
+	.order-item__image{
+		width: 100%;
+		border-right: none;
+		align-items: center;
+		justify-content: center;
+	}
+	.order-item__image img{
+		max-width: 200px;
+	}
+	.order-item__date{
+		width: 100%;
+		border-right: none;
+		border-bottom: none;
+	}
+	.order-item__month{
+		width: 100%;
+		border-bottom: none;
+	}
+	.order-item__counter{
+		width: 100%;
+		border-bottom: none;
+	}
+	.order-item__sum{
+		width: 100%;
+		border-top: 1px solid $borderGrey;
+		padding: 20px 15px;
+	}
+	.order-table--book__title{
+		width: 100%;
+		border-right: none;
+		padding: 20px;
+	}
+	.order-table--book__counter{
+		width: 100%;
+		border-bottom: none;
+	}
+	.order-total{
+		width: 100%;
+	}
+	.order-form__item.small{
+		width: 100%;
+	}
+	.address-info__item{
+		flex-wrap: wrap;
+	}
+	.address-info__title{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.address-info__postal{
+		width: 100%;
+	}
+}

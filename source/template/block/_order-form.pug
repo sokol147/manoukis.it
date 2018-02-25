@@ -134,10 +134,48 @@
 				li.order-form__item(class=`${item.width}`)
 					label(for=`${item.id}`).order-form__label(class=`${item.required}`)= item.label
 					input(id=`${item.id}`).field-input.order-form__input(class=`${item.error}`)
+
+		ul.address-info__list
+			li.address-info__item
+				.address-info__title
+					lable(for='postalOne').order-form__label.required Įmonės / ūkio registracijos adresas
+					input(id='postalOne').order-form__input.field-input
+				.address-info__postal
+					.address-info__label-wrapper
+						label(for='postalcode1').order-form__label.required Pašto kodas
+						a(href='#').news__read-more Paieška
+					.address-info__input-wrapper
+						a(href='#').address-info__btn lt
+						input(id='postalcode1').order-form__input.field-input
+
 		.order-form__field
 			.order-checkbox
-				input(type='checkbox' id='order2').order-checkbox__input
+				input(type='checkbox' id='order2').order-checkbox__input.required
 				label(for='order2').order-checkbox__label Skiriasi prenumeratos pristatymo adresas
+
+		ul.address-info__list
+			li.address-info__item
+				.address-info__title
+					lable(for='postal2').order-form__label.required Mano Ūkis pristatymo adresas
+					input(id='postal2').order-form__input.field-input
+				.address-info__postal
+					.address-info__label-wrapper
+						label(for='postalcode2').order-form__label.required Pašto kodas
+						a(href='#').news__read-more Paieška
+					.address-info__input-wrapper
+						a(href='#').address-info__btn lt
+						input(id='postalcode2').order-form__input.field-input
+			li.address-info__item
+				.address-info__title
+					lable(for='postal3').order-form__label.required VETInfo pristatymo adresas
+					input(id='postal3').order-form__input.field-input
+				.address-info__postal
+					.address-info__label-wrapper
+						label(for='postalcode3').order-form__label.required Pašto kodas
+						a(href='#').news__read-more Paieška
+					.address-info__input-wrapper
+						a(href='#').address-info__btn lt
+						input(id='postalcode3').order-form__input.field-input
 	.order-form__confirm
 		ul.confirm-info__list
 			li.confirm-info__item
