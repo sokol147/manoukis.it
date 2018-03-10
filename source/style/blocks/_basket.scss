@@ -288,6 +288,11 @@
 		}
 	}
 }
+@media only screen and (max-width: 991px){
+	.order .left-banner-column{
+		display: none;
+	}
+}
 @media only screen and (max-width: 850px){
 	.order-item{
 		flex-wrap: wrap;
@@ -350,6 +355,7 @@
 	.order-item__counter{
 		width: 100%;
 		border-bottom: none;
+		border-right: none;
 	}
 	.order-item__sum{
 		width: 100%;

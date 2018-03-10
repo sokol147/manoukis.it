@@ -35,19 +35,19 @@
 		font-size: 14px;
 		font-weight: $regular;
 	}
+	a{
+		color: #000;
+	}
 	&__link{
 		color:#000;
 		&:hover{
-			text-decoration: none;
+			text-decoration: underline;
 			color: #000;
 		}
 	}
 	&__header{
 		font-weight: $bold;
 		margin-bottom: 3px;
-		&:hover{
-			text-decoration: underline;
-		}
 	}
 }
 .journal-content{

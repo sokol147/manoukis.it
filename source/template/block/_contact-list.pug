@@ -108,11 +108,18 @@ ul.contact__list
 				p.contact__name= item.name
 				p.contact__position= item.position
 				.contact__fax
-					p.contact__label Faksas
-					p.contact__info= item.fax
+					p.contact__info
+						span.contact__label Faksas
+						|
+						= item.fax
 				.contact__phone
-					p.contact__label Mob. tel.
-					p.contact__info= item.phone
+					p.contact__info
+						span.contact__label Mob. tel.
+						|
+						= item.phone
 				.contact__email
-					p.contact__label El. paštas 
-					a(href='#').news__read-more.contact__info= item.email
+					
+					p.contact__info
+						span.contact__label El. paštas
+						a(href='#').news__read-more= item.email
+

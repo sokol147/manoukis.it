@@ -376,6 +376,9 @@
 	}
 }
 @media only screen and (max-width: 991px){
+	.catalog .left-banner-column{
+		display: none;
+	}
 	.basket{
 		display: none;
 	}
@@ -387,7 +390,7 @@
 		right: 0;
 		width: 100%;
 		background-color: white;
-		z-index: 10;
+		z-index: 9;
 		border-top: 5px solid $borderGrey;
 		padding: 13px 20px;
 	}

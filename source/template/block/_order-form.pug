@@ -79,7 +79,7 @@
 		each item in orderList
 			li.order-table__item.order-item
 				.order-item__image
-					img(src=`templates/images/magazins/${item.photo}`)
+					//- img(src=`templates/images/magazins/${item.photo}`)
 				.order-item__date
 					.order-dropdown-label= item.labelDate
 					select.order-dropdown-select
@@ -132,8 +132,8 @@
 		ul.order-form__inputs.order-form__list
 			each item in inputList
 				li.order-form__item(class=`${item.width}`)
-					label(for=`${item.id}`).order-form__label(class=`${item.required}`)= item.label
-					input(id=`${item.id}`).field-input.order-form__input(class=`${item.error}`)
+					label(class=`${item.required}` for=`${item.id}`).order-form__label= item.label
+					input(class=`${item.error}` id=`${item.id}`).field-input.order-form__input
 
 		ul.address-info__list
 			li.address-info__item

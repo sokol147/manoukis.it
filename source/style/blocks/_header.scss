@@ -56,10 +56,14 @@
 		left: 0;
 		width: 100%;
 		background: $Brown;
-		z-index: 10;
-		display: none;
+		z-index: -1;
+		/* display: none; */
+		opacity: 0;
+		height: 0;
 		&.open{
-			display: block;
+			/* display: block; */
+			z-index: 10;
+			opacity: 1;
 			height: 100vh;
 		}
 	}

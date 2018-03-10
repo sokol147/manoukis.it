@@ -24,7 +24,7 @@ $(document).ready(function() {
 	$('.order-dropdown-select').selectize();
 	// sliding cart
 
-/*	if($(window).width() >= '991'){
+	if($(window).width() >= '991'){
 		$(function(){
 			var offset = $('.basket').offset()
 					topPadding = 15;
@@ -40,7 +40,7 @@ $(document).ready(function() {
 				}
 			})
 		})
-	}*/
+	}
 
 	// vote widget
 	$('.btn-appearance').on('click', function(e){
@@ -76,5 +76,7 @@ $(document).ready(function() {
 			showArrows: true
 		});
 	});
+
+	$('.selectize-input').children('input').attr('disabled', true);
 });
 
