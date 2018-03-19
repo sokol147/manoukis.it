@@ -111,9 +111,6 @@
 		margin-left: -15px;
 		margin-right: -15px;
 	}
-	.main-content .news__img-link{
-		display: none;
-	}
 	.main-content .right-banner__img{
 		width: 100%;
 	}
@@ -128,5 +125,26 @@
 	}
 	.main-content .news-block__img{
 		width: 100%;
+	}
+}
+@media only screen and (max-width: 600px){
+	.news__img-link{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.news__img{
+		width: 100%;
+		max-width: 100%;
+	}
+	.news__content{
+		width: 100%;
+	}
+	.news__item{
+		flex-wrap: wrap;
+		.news__img{
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 }

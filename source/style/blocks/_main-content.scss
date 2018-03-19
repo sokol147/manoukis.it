@@ -118,6 +118,7 @@
 			font-weight: $bold;
 			color: $green;
 			display: none;
+			width: 30px;
 			&:after{
 				content: '%';
 				margin-left: 1px;
@@ -314,6 +315,7 @@
 		color: #000;
 		line-height: 1.1;
 		width: 100%;
+		word-wrap: break-word;
 		&:hover{
 			color: #000;
 		}

@@ -127,7 +127,6 @@
 	font-weight: $bold;
 }
 .comments{
-
 	&__btn{
 		font-size: 16px;
 		background: $Lime;
@@ -286,6 +285,9 @@
 .news__counter{
 	margin-left: auto;
 }
+.news__banner-mobile{
+	display: none;
+}
 @media only screen and (max-width: 800px){
 	.desk-share{
 		display: none;
@@ -379,5 +381,8 @@
 	}
 	.form-upload .form-field{
 		margin-left: 0;
+	}
+	.news__banner-mobile{
+		display: block;
 	}
 }
