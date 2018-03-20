@@ -55,12 +55,12 @@
 		padding: 9px 15px;
 	}
 	&__month{
-		width: 34%;
+		width: 24%;
 		border-right: 1px solid $borderGrey;
 		padding: 9px 15px;
 	}
 	&__date{
-		width: 29%;
+		width: 19%;
 		border-right: 1px solid $borderGrey;
 		padding: 9px 15px;
 	}
@@ -70,11 +70,16 @@
 		display: flex;
 		align-items: stretch;
 		padding-left: 1px;
+		padding: 9px 15px;
 		img{
 			max-width: 100%;
 			width: 100%;
 		}
 	}
+}
+.order-item__title{
+	font-size: 14px;
+	font-weight: $bold;
 }
 .order-dropdown-label{
 	font-size: 14px;
@@ -302,11 +307,11 @@
 		border-bottom: 1px solid $borderGrey;
 	}
 	.order-item__date{
-		width: 50%;
+		width: 33.33%;
 		border-bottom: 1px solid $borderGrey;
 	}
 	.order-item__month{
-		width: 50%;
+		width: 33.33%;
 		border-bottom: 1px solid $borderGrey;
 		border-right: none;
 	}
@@ -333,8 +338,9 @@
 		padding: 20px 15px;
 	}
 }
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 740px){
 	.order-item__image{
+		padding: 20px 15px;
 		width: 100%;
 		border-right: none;
 		align-items: center;

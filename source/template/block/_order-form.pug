@@ -2,12 +2,14 @@
 	var orderList = [
 		{
 			photo: 'order1.png',
+			labelTitle: 'Užkrečiamųjų spongiforminių encefalopatijų rizikos analizė',
 			labelDate: 'Prenumeratos pradžia:',
 			labelMonth: 'Prenumeratos trukmė (mėn.):',
 			labelCounter: 'Prenumeratos kiekis:',
 			sum: '178.5 Eur'
 		},{
 			photo: 'order2.png',
+			labelTitle: 'Galvijų stemplės ir prieskrandžių ligos',
 			labelDate: 'Prenumeratos pradžia:',
 			labelMonth: 'Prenumeratos trukmė (mėn.):',
 			labelCounter: 'Prenumeratos kiekis:',
@@ -78,8 +80,9 @@
 	ul.order-table__list
 		each item in orderList
 			li.order-table__item.order-item
-				//- .order-item__image
-				//- 	//- img(src=`templates/images/magazins/${item.photo}`)
+				.order-item__image
+					//- img(src=`templates/images/magazins/${item.photo}`)
+					.order-item__title= item.labelTitle
 				.order-item__date
 					.order-dropdown-label= item.labelDate
 					select.order-dropdown-select
